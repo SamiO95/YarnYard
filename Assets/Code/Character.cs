@@ -1,28 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character: ITAKEDAMAGE
 {
     private readonly int DEAD = 0;
     private int health;
-    
-    
 
-    Character(int health) 
+    public Character(int health) 
     {
         this.health = health;
     }
 
-    private void takeDamage(int damage) 
+    public void takeDamage(int damage) 
     {
-        if ((health - damage) < DEAD) 
+        if ((health - damage) <= DEAD) 
         {
             health = DEAD;
+
+            die();
         }
 
-        
+        health -= damage;       
     }
 
-
+    protected virtual void die(){}
 }
