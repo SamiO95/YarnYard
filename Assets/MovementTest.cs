@@ -5,31 +5,30 @@ using UnityEngine;
 
 public class MovementTest : MonoBehaviour
 {
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
             }
