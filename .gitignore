@@ -61,3 +61,4 @@ crashlytics-build.properties
 *.dwlt
 ProjectSettings/Packages/com.unity.probuilder/Settings.json
 UserSettings/Layouts/default-2021.dwlt
+UserSettings/Layouts/CurrentMaximizeLayout.dwlt

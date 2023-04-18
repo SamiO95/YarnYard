@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class MovementTest : MonoBehaviour
 {
+    [SerializeField]
+    float speed = 0.1f;
+
     // Update is called once per frame
     void Update()
     {
@@ -12,12 +15,12 @@ public class MovementTest : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
+                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + speed);
             }
 
             if (Input.GetKey(KeyCode.S))
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
+                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - speed);
             }
         }
 
@@ -25,12 +28,12 @@ public class MovementTest : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
             }
         }
     }
