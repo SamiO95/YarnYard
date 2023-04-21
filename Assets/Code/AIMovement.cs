@@ -15,7 +15,7 @@ public class AIMovement : MonoBehaviour
         this.speed = speed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //Distance to target (x_2 - x_1), y, (z_2 - z_1)
         Vector3 vectorToTarget = new Vector3(obj.transform.position.x - transform.position.x, transform.position.y, obj.transform.position.z - transform.position.z);
