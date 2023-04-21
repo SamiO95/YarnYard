@@ -9,7 +9,7 @@ public class MovementTest : MonoBehaviour
     float speed = 0.1f;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
