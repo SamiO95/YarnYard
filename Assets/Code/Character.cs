@@ -1,27 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class Character: ITAKEDAMAGE
+public class Character: MonoBehaviour, ITAKEDAMAGE
 {
     private readonly int DEAD = 0;
-    private int health;
+    protected int health;
+    public delegate void DeathEvent();    
 
     public Character(int health) 
     {
         this.health = health;
     }
 
-    public void takeDamage(int damage) 
+    public void TakeDamage(int damage) 
     {
         if ((health - damage) <= DEAD) 
         {
             health = DEAD;
 
-            die();
+            Die();
         }
 
         health -= damage;       
     }
 
-    protected virtual void die(){}
+    protected virtual void Die(){}
 }
