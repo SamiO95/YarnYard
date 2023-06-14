@@ -30,4 +30,9 @@ public class AIMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x + vectorToTarget.x, transform.position.y, transform.position.z + vectorToTarget.z); 
     }
 
+    public void SetObject(GameObject obj)
+    {
+        this.obj = obj; 
+    }
+
 }
