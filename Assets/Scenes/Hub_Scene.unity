@@ -3593,7 +3593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6725834943642695202, guid: 7a0a12e8329df7a4984fc3677d8f3fd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -134.7
+      value: -72
       objectReference: {fileID: 0}
     - target: {fileID: 6725834943642695202, guid: 7a0a12e8329df7a4984fc3677d8f3fd8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3601,7 +3601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6725834943642695202, guid: 7a0a12e8329df7a4984fc3677d8f3fd8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.4
+      value: -61.2
       objectReference: {fileID: 0}
     - target: {fileID: 6725834943642695202, guid: 7a0a12e8329df7a4984fc3677d8f3fd8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35678,6 +35678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1352131335145265382, guid: d3865b3236906ea4b9ba4caece21c37c, type: 3}
+  numEnemies: 5
+  spawnRadius: 5
 --- !u!65 &1708659346
 BoxCollider:
   m_ObjectHideFlags: 0

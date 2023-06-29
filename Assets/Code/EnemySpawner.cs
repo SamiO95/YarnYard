@@ -28,9 +28,8 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnDirection = spawnRotation * Vector3.forward;
             Vector3 spawnPosition = playerPosition + spawnDirection * spawnRadius;
 
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, spawnRotation);
             enemy.transform.up = Vector3.up;
-            enemy.transform.rotation *= spawnRotation;
             enemy.GetComponent<AIMovement>().SetObject(player);
         }
     }
