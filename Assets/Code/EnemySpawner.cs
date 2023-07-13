@@ -1,7 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public enum SpawnMode
 {
@@ -42,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
     public int numEnemies = 5;
 
     [SerializeField]
-    private float spawnRadius = 5f; 
+    private float spawnRadius = 5f;
 
     public SpawnMode spawnMode = SpawnMode.AroundPlayer;
 
@@ -57,6 +59,19 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    //private void SpawnEnemies(GameObject player)
+    //{
+    //    switch (spawnMode)
+    //    {
+    //        case SpawnMode.AroundPlayer:
+    //            SpawnAroundPlayer(player);
+    //            break;
+    //        case SpawnMode.Random:
+    //            SpawnRandom(player);
+    //            break;
+    //    }
+    //}
+
     private void SpawnEnemies(GameObject player)
     {
         switch (spawnMode)
@@ -65,7 +80,7 @@ public class EnemySpawner : MonoBehaviour
                 SpawnAroundPlayer(player);
                 break;
             case SpawnMode.Random:
-                SpawnRandom(player);
+                StartCoroutine(SpawnRandom(player));
                 break;
         }
     }
@@ -88,8 +103,67 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void SpawnRandom(GameObject player)
-    {
+    //private void SpawnRandom(GameObject player)
+    //{
+    //    Vector3 playerPosition = player.transform.position;
 
+    //    for (int i = 0; i < numEnemies; i++)
+    //    {
+
+    //        float randomX = Random.Range(-50f, 50f);
+    //        float randomZ = Random.Range(-50f, 50f);
+
+    //        Vector3 spawnPosition = new Vector3(playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
+    //        Quaternion spawnRotation = Quaternion.identity;
+
+    //        GameObject enemy = Instantiate(enemyPrefab, spawnPosition, spawnRotation);
+    //        enemy.transform.up = Vector3.up;
+    //        enemy.GetComponent<AIMovement>().SetObject(player);
+    //    }
+    //}
+
+    //private IEnumerator SpawnRandom(GameObject player)
+    //{
+    //    Vector3 playerPosition = player.transform.position;
+
+    //    for (int i = 0; i < numEnemies; i++)
+    //    {
+    //        float randomX = Random.Range(-10f, 50f);
+    //        float randomZ = Random.Range(-10f, 50f);
+
+    //        Vector3 spawnPosition = new Vector3(playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
+    //        Quaternion spawnRotation = Quaternion.identity;
+
+    //        GameObject enemy = Instantiate(enemyPrefab, spawnPosition, spawnRotation);
+    //        enemy.transform.up = Vector3.up;
+    //        enemy.GetComponent<AIMovement>().SetObject(player);
+
+    //        yield return new WaitForSeconds(1f);
+    //    }
+
+    //    yield break;
+    //}
+
+    private IEnumerator SpawnRandom(GameObject player)
+    {
+        Vector3 playerPosition = player.transform.position;
+        int enemiesSpawned = 0;
+
+        while (enemiesSpawned < numEnemies)
+        {
+            float randomX = Random.Range(-50f, 50f);
+            float randomZ = Random.Range(-50f, 50f);
+
+            Vector3 spawnPosition = new Vector3(playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
+            Quaternion spawnRotation = Quaternion.identity;
+
+            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, spawnRotation);
+            enemy.transform.up = Vector3.up;
+            enemy.GetComponent<AIMovement>().SetObject(player);
+
+            enemiesSpawned++;
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
+

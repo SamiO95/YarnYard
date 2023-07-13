@@ -35337,9 +35337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1352131335145265382, guid: d3865b3236906ea4b9ba4caece21c37c, type: 3}
-  numEnemies: 5
+  numEnemies: 15
   spawnRadius: 5
-  spawnMode: 0
+  spawnMode: 1
 --- !u!65 &1708659346
 BoxCollider:
   m_ObjectHideFlags: 0
