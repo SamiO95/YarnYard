@@ -59,10 +59,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2
-  m_Height: 1
+  m_Radius: 2.4660206
+  m_Height: 4.932041
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.05630684, y: -0.19444656, z: 3.2447863}
 --- !u!54 &1352131335145265378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,4 +162,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
