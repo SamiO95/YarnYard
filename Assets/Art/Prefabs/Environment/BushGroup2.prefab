@@ -345,6 +345,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2739772803464159848}
+  - component: {fileID: 298888936046308482}
+  - component: {fileID: 4082798653280903095}
   m_Layer: 0
   m_Name: BushGroup2
   m_TagString: Untagged
@@ -375,6 +377,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &298888936046308482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174719512015407566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.22966, y: 1.9092615, z: 1}
+  m_Center: {x: 0.46501923, y: 0.12608933, z: 8.153733e-10}
+--- !u!65 &4082798653280903095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174719512015407566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7183533, y: 1.9937034, z: 1}
+  m_Center: {x: -1.6570587, y: 1.6328549, z: 0.0000006520687}
 --- !u!1 &2840380440337130789
 GameObject:
   m_ObjectHideFlags: 0

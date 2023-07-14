@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5651367961737952110}
+  - component: {fileID: 4890983200716497220}
   m_Layer: 0
   m_Name: Bushes2
   m_TagString: Untagged
@@ -117,6 +118,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4890983200716497220
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170939243145496631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.2673798, y: 2.5876245, z: 1}
+  m_Center: {x: -0.6858597, y: 0.71234936, z: 0.00000017600047}
 --- !u!1 &8317020046170439977
 GameObject:
   m_ObjectHideFlags: 0

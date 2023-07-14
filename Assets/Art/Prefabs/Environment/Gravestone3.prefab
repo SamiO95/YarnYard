@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3020083125052961609}
   - component: {fileID: 7693546675219911958}
+  - component: {fileID: 7033067852415402841}
   m_Layer: 0
   m_Name: Gravestone3
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!65 &7033067852415402841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954900114456866878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.16597, y: 3.3723376, z: 2.0555701}
+  m_Center: {x: 0.19943237, y: 2.049786, z: -0.9277778}
