@@ -11,5 +11,4 @@ public class Deactivate : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
 }

@@ -3699,6 +3699,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8918648, y: 4.013076, z: 3.3497162}
   m_Center: {x: 0.055597305, y: -0.18664074, z: 0.059677124}
+--- !u!114 &194672132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194672125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2abe30d56897d444d8af9b4489d071c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  numEnemies: 5
+  spawnRadius: 5
+  spawnMode: 0
 --- !u!1 &198895764
 GameObject:
   m_ObjectHideFlags: 0
@@ -35299,12 +35315,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1708659344}
-  - component: {fileID: 1708659345}
   - component: {fileID: 1708659346}
   - component: {fileID: 1708659347}
   m_Layer: 0
   m_Name: 'EnemySpawn '
-  m_TagString: Untagged
+  m_TagString: EnemySpawnTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35324,22 +35339,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1708659345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708659341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2abe30d56897d444d8af9b4489d071c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1352131335145265382, guid: d3865b3236906ea4b9ba4caece21c37c, type: 3}
-  numEnemies: 15
-  spawnRadius: 5
-  spawnMode: 1
 --- !u!65 &1708659346
 BoxCollider:
   m_ObjectHideFlags: 0

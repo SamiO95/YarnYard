@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UIOBJECT
   - Enemy
+  - EnemySpawnTrigger
   layers:
   - Default
   - TransparentFX
