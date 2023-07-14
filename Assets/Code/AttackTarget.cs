@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageTarget : IWEAPON
+public class AttackTarget : IWEAPON
 {
     [SerializeField]
     private float damageRadius;
@@ -13,7 +13,7 @@ public class DamageTarget : IWEAPON
     [SerializeField]
     private GameObject character;
 
-    DamageTarget(float damageRadius, int damage, GameObject target, GameObject character)
+    AttackTarget(float damageRadius, int damage, GameObject target, GameObject character)
     {
         this.damage = damage;
         this.target = target;
