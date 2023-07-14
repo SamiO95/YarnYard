@@ -9,7 +9,7 @@ public class Character: MonoBehaviour, ITAKEDAMAGE
     protected int health;
     public delegate void DeathEvent();    
 
-    public Character(int health) 
+    protected Character(int health) 
     {
         this.health = health;
     }
