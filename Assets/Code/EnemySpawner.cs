@@ -21,7 +21,7 @@ public class EnemySpawnerEditor : Editor
         var spawnModeProperty = serializedObject.FindProperty("spawnMode");
         var numEnemiesProperty = serializedObject.FindProperty("numEnemies");
         var spawnRadiusProperty = serializedObject.FindProperty("spawnRadius");
-        var enemyPrefabProperty = serializedObject.FindProperty("enemyPrefab");
+        var bearPrefabProperty = serializedObject.FindProperty("bearPrefab");
 
         EditorGUILayout.PropertyField(spawnModeProperty);
 
@@ -29,12 +29,12 @@ public class EnemySpawnerEditor : Editor
         {
             EditorGUILayout.PropertyField(numEnemiesProperty);
             EditorGUILayout.PropertyField(spawnRadiusProperty);
-            EditorGUILayout.PropertyField(enemyPrefabProperty);
+            EditorGUILayout.PropertyField(bearPrefabProperty);
         }
         else if (spawnModeProperty.enumValueIndex == (int)SpawnMode.Random)
         {
             EditorGUILayout.PropertyField(numEnemiesProperty);
-            EditorGUILayout.PropertyField(enemyPrefabProperty);
+            EditorGUILayout.PropertyField(bearPrefabProperty);
         }
 
         serializedObject.ApplyModifiedProperties();
@@ -44,9 +44,17 @@ public class EnemySpawnerEditor : Editor
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
-    public GameObject enemyPrefab;
+    private GameObject bearPrefab;
 
-    public int numEnemies = 5;
+    CreateBear bearCreater = new CreateBear();
+
+    private void Start()
+    {
+        bearCreater.SetBearPrefab(bearPrefab);
+    }
+
+    [SerializeField]
+    private int numEnemies = 5;
 
     [SerializeField]
     private float spawnRadius = 5f;
@@ -89,9 +97,9 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnDirection = spawnRotation * Vector3.forward;
             Vector3 spawnPosition = esp + spawnDirection * spawnRadius;
 
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, spawnRotation);
-            enemy.transform.up = Vector3.up;
-            enemy.GetComponent<AIMovement>().SetObject(gameObject);
+            GameObject enemy = bearCreater.Create(Time.deltaTime, gameObject);
+            enemy.transform.position = spawnPosition;
+            enemy.transform.rotation = spawnRotation;
         }
     }
 
@@ -108,10 +116,10 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnPosition = new Vector3(playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
             Quaternion spawnRotation = Quaternion.identity;
 
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, spawnRotation);
-            enemy.transform.up = Vector3.up;
-            enemy.GetComponent<AIMovement>().SetObject(gameObject);
-            
+            GameObject enemy = bearCreater.Create(Time.deltaTime, gameObject);
+            enemy.transform.position = spawnPosition;
+            enemy.transform.rotation = spawnRotation;
+
             enemiesSpawned++;
             yield return new WaitForSeconds(1f);
         }

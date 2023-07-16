@@ -8,16 +8,27 @@ public class AttackingCharacter : Character
     protected float reloadTime;
     protected List<IWEAPON> weapons;
 
-    protected AttackingCharacter(int health, int baseDamage, float reloadTime, IWEAPON startingWeapon) : base(health)
+    protected AttackingCharacter(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons) : base(health)
     {
         this.baseDamage = baseDamage;
         this.reloadTime = reloadTime;
         weapons = new List<IWEAPON>();
-        weapons.Add(startingWeapon);
+        foreach (IWEAPON w in startingWeapons)
+        {
+            weapons.Add(w);
+        }
+    }
+
+    public void Attack() 
+    {
+        CycleAttacks();
+        SetTimer(reloadTime, Attack);
     }
 
     protected void CycleAttacks() 
     {
+        
+
         foreach (IWEAPON att in weapons) 
         {
             att.Attack(damage);

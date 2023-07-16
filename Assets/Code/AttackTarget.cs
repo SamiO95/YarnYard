@@ -13,7 +13,7 @@ public class AttackTarget : IWEAPON
     [SerializeField]
     private GameObject character;
 
-    AttackTarget(float damageRadius, int damage, GameObject target, GameObject character)
+    public AttackTarget(float damageRadius, int damage, GameObject target, GameObject character)
     {
         this.damage = damage;
         this.target = target;
@@ -21,12 +21,13 @@ public class AttackTarget : IWEAPON
         this.character = character;
     }
 
-    private void Attack()
+    public void Attack(int damage)
     {
         ITAKEDAMAGE damageable = target.GetComponent<ITAKEDAMAGE>();
 
         if (damageable != null)
         {
+
             //Distance to target (x_2 - x_1), y, (z_2 - z_1)
             Vector3 vectorToTarget = new Vector3(target.transform.position.x - character.transform.position.x, character.transform.position.y, target.transform.position.z - character.transform.position.z);
 
@@ -36,7 +37,7 @@ public class AttackTarget : IWEAPON
             //check if distance is less than damage radius
             if (distance < damageRadius)
             {
-                damageable.TakeDamage(damage);
+                damageable.TakeDamage(this.damage);
             }
         }
     }
