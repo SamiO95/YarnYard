@@ -95,12 +95,12 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: EarR
     originalName: 
-    pivot: {x: 0.6141629, y: 0.21770594}
+    pivot: {x: 0.5453462, y: -4.336611}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 264
+      x: 263
       y: 559
       width: 136
       height: 132
@@ -467,7 +467,7 @@ ScriptedImporter:
     spritePosition: {x: 120, y: 551}
   - name: Head
     originalName: 
-    pivot: {x: 0.5357681, y: 0.06356447}
+    pivot: {x: 0.5357681, y: -0.986218}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -824,7 +824,7 @@ ScriptedImporter:
     spritePosition: {x: 131, y: 445}
   - name: EarL
     originalName: 
-    pivot: {x: 0.230364, y: 0.36186218}
+    pivot: {x: 0.5749362, y: 1.3658757}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1141,7 +1141,7 @@ ScriptedImporter:
     spritePosition: {x: 299, y: 562}
   - name: ArmR
     originalName: 
-    pivot: {x: 0.8480827, y: 0.8721399}
+    pivot: {x: 0.6024993, y: -0.2682679}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1886,7 +1886,7 @@ ScriptedImporter:
     spritePosition: {x: 139, y: 157}
   - name: ArmL
     originalName: 
-    pivot: {x: 0.104669005, y: 0.84212935}
+    pivot: {x: 0.5761889, y: 2.4836643}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -2212,7 +2212,7 @@ ScriptedImporter:
     spritePosition: {x: 309, y: 304}
   - name: LegR
     originalName: 
-    pivot: {x: 0.65464425, y: 0.9083809}
+    pivot: {x: 0.63817596, y: 2.0934763}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -2582,7 +2582,7 @@ ScriptedImporter:
     spritePosition: {x: 144, y: 0}
   - name: LegL
     originalName: 
-    pivot: {x: 0.25381988, y: 0.9060161}
+    pivot: {x: 0.4039688, y: 1.8503312}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -2930,7 +2930,7 @@ ScriptedImporter:
     spritePosition: {x: 284, y: 28}
   - name: Tail
     originalName: 
-    pivot: {x: 0.7403616, y: 0.66263837}
+    pivot: {x: 0.63285476, y: 3.5532184}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

@@ -127,6 +127,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBear
       objectReference: {fileID: 0}
+    - target: {fileID: -8089108032486474258, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8089108032486474258, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7744306014291600320, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7744306014291600320, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -191,6 +207,22 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.z
       value: 0.0000000019662636
       objectReference: {fileID: 0}
+    - target: {fileID: -5821151623098943006, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5821151623098943006, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5295948839902242944, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5295948839902242944, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4817080644054425442, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: -0.29971206
@@ -215,6 +247,14 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.z
       value: 0.00000001741028
       objectReference: {fileID: 0}
+    - target: {fileID: -2883950415541499335, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2883950415541499335, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2399341947201816435, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.27532655
@@ -238,6 +278,14 @@ PrefabInstance:
     - target: {fileID: -2399341947201816435, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_Bounds.m_Extent.z
       value: 0.000000009729101
+      objectReference: {fileID: 0}
+    - target: {fileID: 83447198426273775, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 83447198426273775, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420074444178559844, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -330,6 +378,30 @@ PrefabInstance:
     - target: {fileID: 4391535258403323025, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_Bounds.m_Extent.z
       value: 0.0000001353462
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359103177601667974, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359103177601667974, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984809443264295294, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984809443264295294, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527139074387562232, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527139074387562232, guid: cd373933120bab440a32743848eab215, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7865728278067164518, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_Bounds.m_Center.x
