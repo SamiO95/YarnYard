@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1352131335145265381}
   - component: {fileID: 1352131335145265379}
   - component: {fileID: 1352131335145265378}
+  - component: {fileID: 502613014368530455}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Enemy
@@ -47,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbdcfb91cfba784db9c0d0c6665d8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.07
+  speed: 0.1
   obj: {fileID: 6725834943642695205, guid: 7a0a12e8329df7a4984fc3677d8f3fd8, type: 3}
 --- !u!136 &1352131335145265379
 CapsuleCollider:
@@ -79,6 +80,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &502613014368530455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352131335145265382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75640a3a9d9d1149aec467408c9a1ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1352131335149841518
 GameObject:
   m_ObjectHideFlags: 0

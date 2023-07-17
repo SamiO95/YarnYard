@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character: MonoBehaviour, ITAKEDAMAGE
+public class Character: MonoBehaviour,ITAKEDAMAGE
 {
     private readonly int DEAD = 0;
     protected int health;

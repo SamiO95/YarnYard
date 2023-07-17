@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyCharacter : AttackingCharacter
 {
    
-    protected EnemyCharacter(int health, int baseDamage, float reloadTimer, IWEAPON startingWeapon) : base(health, baseDamage, reloadTimer, startingWeapon)
+    protected EnemyCharacter(int health, int baseDamage, float reloadTimer, List<IWEAPON> startingWeapons) : base(health, baseDamage, reloadTimer, startingWeapons)
     { }    
 
     

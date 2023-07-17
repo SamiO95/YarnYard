@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6725834943642695202}
   - component: {fileID: 7629609397150244655}
+  - component: {fileID: 1909824540118353271}
+  - component: {fileID: 3782453368472410370}
+  - component: {fileID: 4416315035553358562}
+  - component: {fileID: 3059770240545072130}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -45,6 +49,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb1ce062f8c80e4393cc51665b462c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5
+--- !u!114 &1909824540118353271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834943642695205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eeff4ca57184384aa709a1fd784fff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &3782453368472410370
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834943642695205}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!136 &4416315035553358562
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834943642695205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.75
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.4, z: 1.7}
+--- !u!114 &3059770240545072130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834943642695205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2abe30d56897d444d8af9b4489d071c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bearPrefab: {fileID: 1352131335145265382, guid: d3865b3236906ea4b9ba4caece21c37c, type: 3}
+  numEnemies: 5
+  spawnRadius: 5
+  spawnMode: 0
 --- !u!1 &6725834944213873028
 GameObject:
   m_ObjectHideFlags: 0
