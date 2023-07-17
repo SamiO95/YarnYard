@@ -95,7 +95,7 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: Ear
     originalName: 
-    pivot: {x: 0.86187613, y: -2.793704}
+    pivot: {x: 0.5504201, y: -2.6605127}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -913,7 +913,7 @@ ScriptedImporter:
     spritePosition: {x: 109, y: 7}
   - name: Tail
     originalName: 
-    pivot: {x: 0.81378144, y: 2.5540473}
+    pivot: {x: 0.6006213, y: 2.923216}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
