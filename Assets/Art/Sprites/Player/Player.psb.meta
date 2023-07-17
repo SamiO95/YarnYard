@@ -913,7 +913,7 @@ ScriptedImporter:
     spritePosition: {x: 109, y: 7}
   - name: Tail
     originalName: 
-    pivot: {x: 0.8279924, y: 2.2771707}
+    pivot: {x: 0.81378144, y: 2.5540473}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
