@@ -452,8 +452,8 @@ ScriptedImporter:
     spritePosition: {x: 86, y: 241}
   - name: Body
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5218187, y: 0.07529763}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -913,13 +913,13 @@ ScriptedImporter:
     spritePosition: {x: 109, y: 7}
   - name: Tail
     originalName: 
-    pivot: {x: 0.6006213, y: 2.923216}
+    pivot: {x: 0.5572118, y: 1.1564806}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 411
+      y: 414
       width: 239
       height: 184
     spriteID: 251f6ba3d00846f428c64ba1bf65dd54
