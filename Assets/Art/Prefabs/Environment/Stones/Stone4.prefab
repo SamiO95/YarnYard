@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2113846666313457684}
   - component: {fileID: 4712869201236057655}
+  - component: {fileID: 1762928248674648026}
   m_Layer: 0
   m_Name: Stone4
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!65 &1762928248674648026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354515201869172874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.02, y: 0.79085183, z: 0.4342061}
+  m_Center: {x: 0, y: 0.39303046, z: -0.11710275}
