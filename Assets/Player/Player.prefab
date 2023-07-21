@@ -198,8 +198,8 @@ MonoBehaviour:
   - {fileID: 7903045648780944487}
   - {fileID: 2632162822208411091}
   m_Bounds:
-    m_Center: {x: -0.8325008, y: -0.38001394, z: -0.00000027522108}
-    m_Extent: {x: 1.1411345, y: 0.76115024, z: 0.00000033208275}
+    m_Center: {x: -0.8324933, y: -0.38001478, z: -0.00000025509075}
+    m_Extent: {x: 1.1411655, y: 0.76114976, z: 0.00000027360585}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
   - {fileID: 8900835384860962408}
   - {fileID: 2020682515010905012}
   m_Bounds:
-    m_Center: {x: -0.811723, y: 0.28666806, z: 0.000000032025298}
-    m_Extent: {x: 1.1811751, y: 0.9110247, z: 0.0000002475045}
+    m_Center: {x: -0.8117466, y: 0.2866671, z: -0.000000034721722}
+    m_Extent: {x: 1.1811445, y: 0.91102505, z: 0.00000027784432}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -544,8 +544,8 @@ MonoBehaviour:
   - {fileID: 5855906170511631624}
   - {fileID: 3195240967127749295}
   m_Bounds:
-    m_Center: {x: -0.001964569, y: -0.002098918, z: 0.00000019077356}
-    m_Extent: {x: 1.5770257, y: 1.9929004, z: 0.00000035256846}
+    m_Center: {x: -0.0019772053, y: -0.0020996332, z: 0.000000057518633}
+    m_Extent: {x: 1.5770257, y: 1.9928999, z: 0.0000003270113}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 3782453368472410370}
   - component: {fileID: 4416315035553358562}
   - component: {fileID: 3059770240545072130}
+  - component: {fileID: 480967196210305349}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -758,7 +759,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725834943642695205}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.75
   m_Height: 1
@@ -780,6 +781,20 @@ MonoBehaviour:
   numEnemies: 5
   spawnRadius: 5
   spawnMode: 0
+--- !u!136 &480967196210305349
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834943642695205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 15
+  m_Height: 50
+  m_Direction: 0
+  m_Center: {x: 0, y: 1, z: 1.5}
 --- !u!1 &6725834944213873028
 GameObject:
   m_ObjectHideFlags: 0
