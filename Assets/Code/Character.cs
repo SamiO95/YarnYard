@@ -7,7 +7,8 @@ public class Character: MonoBehaviour,ITAKEDAMAGE
 {
     private readonly int DEAD = 0;
     protected int health;
-    public delegate void DeathEvent();    
+    public delegate void DeathEvent();
+    public delegate void DamageTakenEvent();
 
     protected Character(int health) 
     {
@@ -21,9 +22,11 @@ public class Character: MonoBehaviour,ITAKEDAMAGE
             health = DEAD;
 
             Die();
+            return;
         }
 
-        health -= damage;       
+        health -= damage;
+        DamageTaken();
     }
 
     protected void SetTimer(float _Time, Action _TimerAction)
@@ -39,4 +42,5 @@ public class Character: MonoBehaviour,ITAKEDAMAGE
     }
 
     protected virtual void Die(){}
+    protected virtual void DamageTaken() { }
 }
