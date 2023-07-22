@@ -7,6 +7,7 @@ public class AttackingCharacter : Character
     protected int damage;
     protected float reloadTime;
     protected List<IWEAPON> weapons;
+    private readonly int EMPTY = 0;
 
     protected AttackingCharacter(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons) : base(health)
     {
@@ -27,11 +28,12 @@ public class AttackingCharacter : Character
 
     protected void CycleAttacks() 
     {
-        
-
-        foreach (IWEAPON att in weapons) 
+        if (weapons != null && weapons.Count != EMPTY)
         {
-            att.Attack(damage);
+            foreach (IWEAPON att in weapons)
+            {
+                att.Attack(damage);
+            }
         }
     }
 
