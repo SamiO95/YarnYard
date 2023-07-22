@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerCharacter: AttackingCharacter
 { 
-    public event EventHandler PlayerDeathEvent;
+    public event DeathEvent PlayerDeathEvent;
+    public event DamageTakenEvent PlayerDamagedEvent;
 
     private readonly int startingHealth = 100;
     private readonly int startingBaseDamage = 10;
@@ -27,7 +28,15 @@ public class PlayerCharacter: AttackingCharacter
         if (gameObject != null) 
         {
             Debug.Log("Player dead");
-            PlayerDeathEvent?.Invoke(this, System.EventArgs.Empty);
+            PlayerDeathEvent?.Invoke();
+        }
+    }
+
+    protected override void DamageTaken()
+    {
+        if (gameObject != null)
+        {
+            PlayerDamagedEvent?.Invoke();
         }
     }
 
@@ -41,6 +50,11 @@ public class PlayerCharacter: AttackingCharacter
     public List<EnemyCharacter> GetEnemyList() 
     {
         return enemies;
+    }
+        
+    public int GetPlayerHealth()
+    {
+        return health;
     }
 
     private void OnTriggerEnter(Collider other)
