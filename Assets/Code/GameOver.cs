@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject GameOverMenu;
+    public GameObject gameOverMenu;
+    public GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +17,16 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameOverMenu.activeInHierarchy)
+        if (gameOverMenu.activeInHierarchy || pauseMenu.activeInHierarchy) 
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
     }
 
+    //Sets the Game Over UI to active when the Player dies
     public void YouDied()
     {
-        GameOverMenu.SetActive(true);
+        gameOverMenu.SetActive(true);
     }
 }
