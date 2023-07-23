@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
 
     void TogglePauseMenuUI() 
     {
-        if (pauseUI.active) 
+        if (pauseUI.activeInHierarchy) 
         {
             pauseUI.SetActive(false);
         } 
