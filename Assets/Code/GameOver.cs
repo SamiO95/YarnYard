@@ -6,6 +6,7 @@ public class GameOver : MonoBehaviour
 {
     public GameObject gameOverMenu;
     public GameObject pauseMenu;
+    public GameObject optionsMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +18,15 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameOverMenu.activeInHierarchy || pauseMenu.activeInHierarchy) 
+        if (gameOverMenu.activeInHierarchy || pauseMenu.activeInHierarchy || optionsMenu.activeInHierarchy) 
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+        }
+        else 
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
