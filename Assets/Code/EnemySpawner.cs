@@ -11,35 +11,35 @@ public enum SpawnMode
     Random
 }
 
-[CustomEditor(typeof(EnemySpawner))]
-public class EnemySpawnerEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        serializedObject.Update();
+//[CustomEditor(typeof(EnemySpawner))]
+//public class EnemySpawnerEditor : Editor
+//{
+//    public override void OnInspectorGUI()
+//    {
+//        serializedObject.Update();
 
-        var spawnModeProperty = serializedObject.FindProperty("spawnMode");
-        var numEnemiesProperty = serializedObject.FindProperty("numEnemies");
-        var spawnRadiusProperty = serializedObject.FindProperty("spawnRadius");
-        var bearPrefabProperty = serializedObject.FindProperty("bearPrefab");
+//        var spawnModeProperty = serializedObject.FindProperty("spawnMode");
+//        var numEnemiesProperty = serializedObject.FindProperty("numEnemies");
+//        var spawnRadiusProperty = serializedObject.FindProperty("spawnRadius");
+//        var bearPrefabProperty = serializedObject.FindProperty("bearPrefab");
 
-        EditorGUILayout.PropertyField(spawnModeProperty);
+//        EditorGUILayout.PropertyField(spawnModeProperty);
 
-        if (spawnModeProperty.enumValueIndex == (int)SpawnMode.AroundPlayer)
-        {
-            EditorGUILayout.PropertyField(numEnemiesProperty);
-            EditorGUILayout.PropertyField(spawnRadiusProperty);
-            EditorGUILayout.PropertyField(bearPrefabProperty);
-        }
-        else if (spawnModeProperty.enumValueIndex == (int)SpawnMode.Random)
-        {
-            EditorGUILayout.PropertyField(numEnemiesProperty);
-            EditorGUILayout.PropertyField(bearPrefabProperty);
-        }
+//        if (spawnModeProperty.enumValueIndex == (int)SpawnMode.AroundPlayer)
+//        {
+//            EditorGUILayout.PropertyField(numEnemiesProperty);
+//            EditorGUILayout.PropertyField(spawnRadiusProperty);
+//            EditorGUILayout.PropertyField(bearPrefabProperty);
+//        }
+//        else if (spawnModeProperty.enumValueIndex == (int)SpawnMode.Random)
+//        {
+//            EditorGUILayout.PropertyField(numEnemiesProperty);
+//            EditorGUILayout.PropertyField(bearPrefabProperty);
+//        }
 
-        serializedObject.ApplyModifiedProperties();
-    }
-}
+//        serializedObject.ApplyModifiedProperties();
+//    }
+//}
 
 public class EnemySpawner : MonoBehaviour
 {
