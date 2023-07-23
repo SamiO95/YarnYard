@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        FindObjectOfType<PlayerCharacter>().PlayerDeathEvent += YouDied;
     }
 
     // Update is called once per frame
