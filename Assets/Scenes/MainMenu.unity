@@ -943,7 +943,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Level Design, \nSpawning, \nVFX & Lighting"
+  m_text: 'Level Design
+
+    Game Design
+
+    Spawning
+
+    VFX & Lighting'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2e9cf4cb212b584ebfd7d105a285a53, type: 2}
   m_sharedMaterial: {fileID: 466081880438721295, guid: b2e9cf4cb212b584ebfd7d105a285a53, type: 2}
@@ -5721,6 +5727,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game System Design
 
+    Game Design
+
     Scripting'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2e9cf4cb212b584ebfd7d105a285a53, type: 2}
@@ -5910,7 +5918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.024094, y: -14.504494}
+  m_AnchoredPosition: {x: 14.02, y: -73}
   m_SizeDelta: {x: 662.8481, y: 353.8398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1896076478
