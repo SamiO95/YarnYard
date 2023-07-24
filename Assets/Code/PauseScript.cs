@@ -9,6 +9,7 @@ public class PauseScript : MonoBehaviour
     public event PauseDelegate PauseEvent;
     public delegate void ResumeDelegate();
     public event ResumeDelegate ResumeEvent;
+    public GameObject gameOverMenu;
 
     private void Start()
     {
@@ -19,15 +20,18 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) 
-        { 
-            if (Time.timeScale == 0) 
-            { 
-                ResumeEvent?.Invoke();
-            }
-            else
+        if (!gameOverMenu.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                PauseEvent?.Invoke();
+                if (Time.timeScale == 0)
+                {
+                    ResumeEvent?.Invoke();
+                }
+                else
+                {
+                    PauseEvent?.Invoke();
+                }
             }
         }
     }
