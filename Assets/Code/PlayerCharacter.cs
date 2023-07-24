@@ -21,6 +21,7 @@ public class PlayerCharacter: AttackingCharacter
         CreateNewPlayer();
         enemies = new List<EnemyCharacter>();
         Attack();
+        FindObjectOfType<PlayerCharacter>().PlayerDamagedEvent += UpdateHealthUI;
     }
 
     protected override void Die() 
