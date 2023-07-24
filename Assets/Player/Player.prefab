@@ -136,8 +136,8 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2363524988805844089}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f4abe283e05a3ee4d9762c75cf8e584f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   - {fileID: 7903045648780944487}
   - {fileID: 2632162822208411091}
   m_Bounds:
-    m_Center: {x: -0.8324857, y: -0.38001347, z: 0.00000057231574}
-    m_Extent: {x: 1.1411655, y: 0.76115036, z: 0.0000011010123}
+    m_Center: {x: -0.8324933, y: -0.38001478, z: -0.00000025509075}
+    m_Extent: {x: 1.1411655, y: 0.76114976, z: 0.00000027360585}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -275,8 +275,8 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2775825909320578296}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -287,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6352ee762a1ad2e46a09858906073432, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
   - {fileID: 8900835384860962408}
   - {fileID: 2020682515010905012}
   m_Bounds:
-    m_Center: {x: -0.81173515, y: 0.2866671, z: -0.00000086622003}
-    m_Extent: {x: 1.1811788, y: 0.91102695, z: 0.00000093617734}
+    m_Center: {x: -0.8117466, y: 0.2866671, z: -0.000000034721722}
+    m_Extent: {x: 1.1811445, y: 0.91102505, z: 0.00000027784432}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -479,8 +479,8 @@ SpriteRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5591439379040597344}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -491,7 +491,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc243b79ac1d0a541947d03d8760ea45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -544,8 +544,8 @@ MonoBehaviour:
   - {fileID: 5855906170511631624}
   - {fileID: 3195240967127749295}
   m_Bounds:
-    m_Center: {x: -0.001954317, y: -0.0020982027, z: -0.000000061690656}
-    m_Extent: {x: 1.5769951, y: 1.9929004, z: 0.000000207802}
+    m_Center: {x: -0.0019772053, y: -0.0020996332, z: 0.000000057518633}
+    m_Extent: {x: 1.5770257, y: 1.9928999, z: 0.0000003270113}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
