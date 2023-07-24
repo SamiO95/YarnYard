@@ -7,9 +7,9 @@ public class PlayerCharacter: AttackingCharacter
     public event DeathEvent PlayerDeathEvent;
     public event DamageTakenEvent PlayerDamagedEvent;
 
-    private readonly int startingHealth = 100;
-    private readonly int startingBaseDamage = 10;
-    private readonly float startingReloadTime = 1f;
+    private readonly int MAXHEALTH = 100;
+    private readonly int STARTINGBASEDAMAGE = 10;
+    private readonly float STARTINGRELOADTIME = 1f;
     private IWEAPON startingWeapon;
     private List<EnemyCharacter> enemies;
 
@@ -42,9 +42,9 @@ public class PlayerCharacter: AttackingCharacter
 
     private void CreateNewPlayer()
     {
-        health = startingHealth;
-        baseDamage = startingBaseDamage;
-        reloadTime = startingReloadTime;
+        health = MAXHEALTH;
+        baseDamage = STARTINGBASEDAMAGE;
+        reloadTime = STARTINGRELOADTIME;
     }
 
     public List<EnemyCharacter> GetEnemyList() 
@@ -55,6 +55,11 @@ public class PlayerCharacter: AttackingCharacter
     public int GetPlayerHealth()
     {
         return health;
+    }
+
+    public int GetPlayerMaxHealth()
+    {
+        return MAXHEALTH;
     }
 
     private void OnTriggerEnter(Collider other)

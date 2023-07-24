@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
     [SerializeField]
-    private 
+    private Slider healthSlider;
+    private PlayerCharacter player;
 
     // Start is called before the first frame update
     void Start()
     {
-        //FindObjectOfType<PlayerCharacter>().PlayerDamagedEvent += UpdateHealthUI;
+        player = FindObjectOfType<PlayerCharacter>();
+        if (player != null)
+        {
+            player.PlayerDamagedEvent += UpdateHealthUI;
+            healthSlider.maxValue = player.GetPlayerMaxHealth();
+        }
     }
 
-    //public void UpdateHealthUI()
-    //{
-        
-    //}
+    public void UpdateHealthUI()
+    {
+        healthSlider.value = player.GetPlayerHealth();
+    }
 }
