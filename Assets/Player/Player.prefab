@@ -198,8 +198,8 @@ MonoBehaviour:
   - {fileID: 7903045648780944487}
   - {fileID: 2632162822208411091}
   m_Bounds:
-    m_Center: {x: -0.8324933, y: -0.38001478, z: -0.00000025509075}
-    m_Extent: {x: 1.1411655, y: 0.76114976, z: 0.00000027360585}
+    m_Center: {x: -0.8324857, y: -0.38001728, z: -0.00000083575657}
+    m_Extent: {x: 1.1411655, y: 0.76114845, z: 0.00000059144446}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
   - {fileID: 8900835384860962408}
   - {fileID: 2020682515010905012}
   m_Bounds:
-    m_Center: {x: -0.8117466, y: 0.2866671, z: -0.000000034721722}
-    m_Extent: {x: 1.1811445, y: 0.91102505, z: 0.00000027784432}
+    m_Center: {x: -0.81173515, y: 0.2866671, z: -0.00000038938288}
+    m_Extent: {x: 1.1811788, y: 0.91102695, z: 0.00000045934024}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -544,8 +544,8 @@ MonoBehaviour:
   - {fileID: 5855906170511631624}
   - {fileID: 3195240967127749295}
   m_Bounds:
-    m_Center: {x: -0.0019772053, y: -0.0020996332, z: 0.000000057518633}
-    m_Extent: {x: 1.5770257, y: 1.9928999, z: 0.0000003270113}
+    m_Center: {x: -0.001954317, y: -0.0020982027, z: 0.000000026555881}
+    m_Extent: {x: 1.5769951, y: 1.9929004, z: 0.0000009862108}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -806,6 +806,7 @@ GameObject:
   - component: {fileID: 6725834944213873027}
   - component: {fileID: 6725834944213873026}
   - component: {fileID: 6725834944213873029}
+  - component: {fileID: 6744118686002468670}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -837,8 +838,8 @@ Camera:
   m_GameObject: {fileID: 6725834944213873028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -879,6 +880,39 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725834944213873028}
   m_Enabled: 1
+--- !u!114 &6744118686002468670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834944213873028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: 0
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &6742693921439194281
 GameObject:
   m_ObjectHideFlags: 0
