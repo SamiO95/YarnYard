@@ -22,18 +22,15 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Player_Body
   m_Shader: {fileID: -6465566751694194690, guid: 49782819971692444860296dc3cd002a, type: 3}
-  m_ValidKeywords:
-  - _ALPHATEST_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses:
-  - DepthOnly
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -59,6 +56,10 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
+    - _DecalMeshBiasType: 0
+    - _DecalMeshDepthBias: 0
+    - _DecalMeshViewBias: 0
+    - _DrawOrder: 0
     - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
