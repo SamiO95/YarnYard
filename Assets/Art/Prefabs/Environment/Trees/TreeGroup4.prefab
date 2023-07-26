@@ -11,10 +11,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f16c7d91045ed6a40978837aeeb89cef, type: 3}
+    - target: {fileID: 4198981245565373756, guid: 43704c6b4495832488f72fd256fb93a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4744be826f12dfa40bee8efd8c7ee1f0, type: 2}
     - target: {fileID: 4198981246130293734, guid: 43704c6b4495832488f72fd256fb93a1, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0f24694311c2ea8499d705ca8e1dbb8c, type: 3}
+    - target: {fileID: 4198981246130293734, guid: 43704c6b4495832488f72fd256fb93a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83ad9b36e1cb9074cad7c8b37cc1f34d, type: 2}
     - target: {fileID: 4198981246196869554, guid: 43704c6b4495832488f72fd256fb93a1, type: 3}
       propertyPath: m_Name
       value: TreeGroup4
@@ -67,5 +75,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e123873954281f246a5675aa56f5c02d, type: 3}
+    - target: {fileID: 4198981247015280201, guid: 43704c6b4495832488f72fd256fb93a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d96206a3856be04d9ef6339a7baa035, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43704c6b4495832488f72fd256fb93a1, type: 3}
