@@ -467,7 +467,7 @@ ScriptedImporter:
     spritePosition: {x: 120, y: 551}
   - name: Head
     originalName: 
-    pivot: {x: 0.5357681, y: -0.986218}
+    pivot: {x: 0.5223108, y: -1.0795565}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
