@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyCharacter : AttackingCharacter
 {
-   
+
+    public event DeathEvent EnemyDeathEvent;
+    public event DamageTakenEvent EnemyDamagedEvent;
+
     protected EnemyCharacter(int health, int baseDamage, float reloadTimer, List<IWEAPON> startingWeapons) : base(health, baseDamage, reloadTimer, startingWeapons)
     { }    
 
@@ -14,8 +17,7 @@ public class EnemyCharacter : AttackingCharacter
     {
         if (gameObject != null)
         {
-            //Drop Player exp?
-            Destroy(gameObject);
+            EnemyDamagedEvent?.Invoke();
         }
     }
 
