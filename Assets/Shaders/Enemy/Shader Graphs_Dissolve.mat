@@ -24,7 +24,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 4b4ad0eb14ef1b4488066c8acdd3218a, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,9 +55,9 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _clippingValue: 0.365
+    - _clippingValue: 0.066
     m_Colors:
-    - _Color: {r: 0.7924528, g: 0.4060672, b: 0.05606977, a: 0}
+    - _Color: {r: 0, g: 0.6880622, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5415889713682612389
 MonoBehaviour:
