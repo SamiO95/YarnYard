@@ -67,9 +67,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 559ab92458a16714187ac29af1a71619, type: 2}
+    - target: {fileID: 6851407395634943895, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123001035057002787, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669894432439504738, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.039
+      objectReference: {fileID: 0}
     - target: {fileID: 8047586819481838320, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}
       propertyPath: m_Name
-      value: GrassGroup5 (1)
+      value: GGrassGroup5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340573312771866414, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144822448209237946, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7187fd7095c9898498ffc4a5f81b9b7c, type: 3}

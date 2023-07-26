@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2874425330951913984, guid: 75c91256d35738543818a576138fafbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.021
+      objectReference: {fileID: 0}
     - target: {fileID: 5716172527189709062, guid: 75c91256d35738543818a576138fafbe, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -59,9 +63,13 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: de67ab8cba8d6bc4589d34d98326ec82, type: 2}
+    - target: {fileID: 5845783204677763348, guid: 75c91256d35738543818a576138fafbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 8848825842197829718, guid: 75c91256d35738543818a576138fafbe, type: 3}
       propertyPath: m_Name
-      value: GrassGroup6 (1)
+      value: GGrassGroup6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75c91256d35738543818a576138fafbe, type: 3}
