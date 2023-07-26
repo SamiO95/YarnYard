@@ -17,7 +17,7 @@ public class EnemyCharacter : AttackingCharacter
     {
         if (gameObject != null)
         {
-            EnemyDamagedEvent?.Invoke();
+            EnemyDeathEvent?.Invoke();
         }
     }
 
