@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CreateBear : MonoBehaviour, ICREATE
 {
+    CreateBear() { }
+
     [SerializeField]
     GameObject bearPrefab;
 

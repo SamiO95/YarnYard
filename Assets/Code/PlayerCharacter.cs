@@ -7,9 +7,9 @@ public class PlayerCharacter: AttackingCharacter
     public event DeathEvent PlayerDeathEvent;
     public event DamageTakenEvent PlayerDamagedEvent;
 
-    private readonly int MAXHEALTH = 100;
-    private readonly int STARTINGBASEDAMAGE = 10;
-    private readonly float STARTINGRELOADTIME = 1f;
+    private readonly static int MAXHEALTH = 100;
+    private readonly static int STARTINGBASEDAMAGE = 10;
+    private readonly static float STARTINGRELOADTIME = 1f;
     private IWEAPON startingWeapon;
     private List<EnemyCharacter> enemies;
 
@@ -59,6 +59,7 @@ public class PlayerCharacter: AttackingCharacter
 
     public int GetPlayerMaxHealth()
     {
+        Debug.Log(MAXHEALTH);
         return MAXHEALTH;
     }
 

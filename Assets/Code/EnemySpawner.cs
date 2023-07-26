@@ -46,10 +46,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject bearPrefab;
 
-    CreateBear bearCreater = new CreateBear();
+    CreateBear bearCreater;
 
     private void Start()
     {
+        bearCreater = gameObject.AddComponent<CreateBear>();
         bearCreater.SetBearPrefab(bearPrefab);
     }
 
