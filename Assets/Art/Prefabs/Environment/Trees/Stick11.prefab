@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2655658778567216764}
   - component: {fileID: 477484015096488676}
+  - component: {fileID: 8302643317704044112}
   m_Layer: 0
   m_Name: Stick11
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!65 &8302643317704044112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740028100740769990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.96373236, y: 2.2848835, z: 2.146264}
+  m_Center: {x: -0.1581338, y: 1.9299235, z: -0.9731238}
