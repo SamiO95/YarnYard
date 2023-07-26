@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 490917017467134753, guid: 833bfe49a409e03458c243718f47ee6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754074651598008581, guid: 833bfe49a409e03458c243718f47ee6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.006
+      objectReference: {fileID: 0}
     - target: {fileID: 3442105886928036239, guid: 833bfe49a409e03458c243718f47ee6a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -61,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955513087902596019, guid: 833bfe49a409e03458c243718f47ee6a, type: 3}
       propertyPath: m_Name
-      value: GrassGroup7 (1)
+      value: GGrassGroup7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 833bfe49a409e03458c243718f47ee6a, type: 3}

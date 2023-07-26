@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 673988598524427807, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
       propertyPath: m_Name
-      value: GrassGroup4 (1)
+      value: GGrassGroup4
       objectReference: {fileID: 0}
     - target: {fileID: 1486388463325203097, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
       propertyPath: m_RootOrder
@@ -54,6 +54,14 @@ PrefabInstance:
     - target: {fileID: 1486388463325203097, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596521715271976124, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895984619164060420, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.019
       objectReference: {fileID: 0}
     - target: {fileID: 8248797566269193144, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
       propertyPath: m_Sprite
