@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.043
       objectReference: {fileID: 0}
+    - target: {fileID: 2666909784370394968, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7895984619164060420, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.019
@@ -67,6 +71,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4cc0e349f9f5c1d4d9ffdb04b2bb1138, type: 3}
+    - target: {fileID: 8248797566269193144, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8248797566269193144, guid: aff54e01357b0774fb1b3e03018cbcf6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

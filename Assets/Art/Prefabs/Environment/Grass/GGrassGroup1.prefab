@@ -51,29 +51,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3574121523629944904, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4427751130256534887, guid: 4e1b35af16fe55f49873183638603585, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1882
       objectReference: {fileID: 0}
     - target: {fileID: 5170780147576515349, guid: 4e1b35af16fe55f49873183638603585, type: 3}
       propertyPath: m_Name
-      value: GrassGroup1 (1)
+      value: GGrassGroup1
       objectReference: {fileID: 0}
     - target: {fileID: 7204904048369091123, guid: 4e1b35af16fe55f49873183638603585, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 851c02de789c95c46924de5829e847c4, type: 3}
     - target: {fileID: 7204904048369091123, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204904048369091123, guid: 4e1b35af16fe55f49873183638603585, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 559ab92458a16714187ac29af1a71619, type: 2}
+    - target: {fileID: 7501863438039645823, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340080669414208880, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559474737940180468, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588199807239198643, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8765322155753182551, guid: 4e1b35af16fe55f49873183638603585, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 41ca6b254677e5147b5607c83510d9dd, type: 3}
     - target: {fileID: 8765322155753182551, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765322155753182551, guid: 4e1b35af16fe55f49873183638603585, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0d97647f3a6d6b445b6c99cf8a1c590d, type: 2}
+    - target: {fileID: 8916592482655653207, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021737021079554615, guid: 4e1b35af16fe55f49873183638603585, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e1b35af16fe55f49873183638603585, type: 3}

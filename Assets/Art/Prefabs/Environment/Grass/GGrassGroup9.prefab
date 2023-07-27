@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3807884845359861466, guid: 2efc2ec3aa7481f4d8dae232c65d8dae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8276081988021436693, guid: 2efc2ec3aa7481f4d8dae232c65d8dae, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,12 +57,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8834313925189400037, guid: 2efc2ec3aa7481f4d8dae232c65d8dae, type: 3}
       propertyPath: m_Name
-      value: GrassGroup9 (1)
+      value: GGrassGroup9
       objectReference: {fileID: 0}
     - target: {fileID: 9025834076613033875, guid: 2efc2ec3aa7481f4d8dae232c65d8dae, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d685812109c64734dad4b94b29568b15, type: 3}
+    - target: {fileID: 9025834076613033875, guid: 2efc2ec3aa7481f4d8dae232c65d8dae, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9025834076613033875, guid: 2efc2ec3aa7481f4d8dae232c65d8dae, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
