@@ -7,12 +7,9 @@ public class CursorManager : MonoBehaviour
     [SerializeField]
     private Texture2D cursorTexture;
 
-    private Vector2 cursorHotspot;
-
     // Start is called before the first frame update
     void Start()
     {
-        cursorHotspot = new Vector2(0, 0);
-        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
     }
 }
