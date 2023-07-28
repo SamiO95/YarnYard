@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a89e7f3ed990a1249a7a4fa26ac3f101
+guid: ead9aa6835cb8c1469e04755f3908948
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Santa Festival
-  fallbackFontReferences: []
+  - Oswald
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7929d3c349709fb4cb349f3fb648608d, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

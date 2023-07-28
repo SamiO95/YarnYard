@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d74cace55360b2c41b6644253532d372
+guid: 7929d3c349709fb4cb349f3fb648608d
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - CoalhandLukeTRIAL
+  - Oswald
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
