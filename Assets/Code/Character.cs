@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Character: MonoBehaviour,ITAKEDAMAGE
 {
-    private readonly int DEAD = 0;
+    private static readonly int DEAD = 0;
     protected int health;
     public delegate void DeathEvent();
     public delegate void DamageTakenEvent();

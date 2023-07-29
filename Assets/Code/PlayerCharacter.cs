@@ -59,7 +59,6 @@ public class PlayerCharacter: AttackingCharacter
 
     public int GetPlayerMaxHealth()
     {
-        Debug.Log(MAXHEALTH);
         return MAXHEALTH;
     }
 

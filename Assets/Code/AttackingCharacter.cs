@@ -7,7 +7,7 @@ public class AttackingCharacter : Character
     protected int damage;
     protected float reloadTime;
     protected List<IWEAPON> weapons;
-    private readonly int EMPTY = 0;
+    private static readonly int EMPTY = 0;
 
     protected AttackingCharacter(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons) : base(health)
     {

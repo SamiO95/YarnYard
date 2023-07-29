@@ -8,22 +8,33 @@ public class Attack_YarnGrave : IWEAPON
     [SerializeField]
     private AttackSpawner attackSpawner;
     [SerializeField]
-    private GameObject attObj;
+    private GameObject attackObject;
     [SerializeField]
-    private Transform attackDir;
+    private Transform attackDirection;
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    private float time;
+    [SerializeField]
+    private string target;
 
-
-    Attack_YarnGrave(AttackSpawner attackSpawner, GameObject attObj, Transform attackDir) 
+    Attack_YarnGrave(AttackSpawner attackSpawner, GameObject attackObject, Transform attackDirection, float speed, float time, string target) 
     {
         this.attackSpawner = attackSpawner;
-        this.attObj = attObj;
-        this.attackDir = attackDir;
+        this.attackObject = attackObject;
+        this.attackDirection = attackDirection;
+        this.speed = speed;
+        this.time = time;
+        this.target = target;
     }
 
 
     public void Attack(int damage) 
     {
-        attackSpawner.InstantiateAttack(attObj, attackDir, damage); 
+        if (attackSpawner != null)
+        {
+            attackSpawner.InstantiateAttack(attackObject, attackDirection, target, speed, time, damage);
+        }
     }
 
 

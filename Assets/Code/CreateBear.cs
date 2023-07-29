@@ -9,12 +9,12 @@ public class CreateBear : MonoBehaviour, ICREATE
     [SerializeField]
     GameObject bearPrefab;
 
-    private readonly int BASEHEALTH = 10; 
-    private readonly float HEALTHMOD = 1.1f;
-    private readonly int BASEDAMAGE = 10;
-    private readonly float DAMAGEMOD = 1.1f;
-    private readonly float RELOADTIME = 2f;
-    private readonly float MELEERANGE = 1.5f;
+    private static readonly int BASEHEALTH = 10; 
+    private static readonly float HEALTHMOD = 1.1f;
+    private static readonly int BASEDAMAGE = 10;
+    private static readonly float DAMAGEMOD = 1.1f;
+    private static readonly float RELOADTIME = 1f;
+    private static readonly float MELEERANGE = 2f;
 
     public GameObject Create(float time, GameObject player)
     {
