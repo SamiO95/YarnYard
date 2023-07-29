@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8089108032486474258, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8089108032486474258, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8089108032486474258, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8089108032486474258, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d3fb83d0b13c7e6449c47b3865684877, type: 2}
     - target: {fileID: -7744306014291600320, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7744306014291600320, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7744306014291600320, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7744306014291600320, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -272,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5821151623098943006, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5821151623098943006, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5821151623098943006, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5821151623098943006, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -292,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3719ed5b53b295344874181bd48c1b24, type: 2}
     - target: {fileID: -5295948839902242944, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5295948839902242944, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5295948839902242944, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5295948839902242944, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2883950415541499335, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2883950415541499335, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2883950415541499335, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2883950415541499335, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 83447198426273775, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 83447198426273775, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -388,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 83447198426273775, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 83447198426273775, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359103177601667974, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5359103177601667974, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -512,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359103177601667974, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5359103177601667974, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -524,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fbde4bcc18180d945af654c0efee96bf, type: 2}
     - target: {fileID: 5984809443264295294, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984809443264295294, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -532,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5984809443264295294, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5984809443264295294, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
@@ -544,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c2b883476a247334b8a377b34f1a983f, type: 2}
     - target: {fileID: 6527139074387562232, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6527139074387562232, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SortingOrder
@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6527139074387562232, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_ReceiveShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6527139074387562232, guid: cd373933120bab440a32743848eab215, type: 3}
       propertyPath: m_SpriteSortPoint
