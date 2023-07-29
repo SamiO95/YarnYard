@@ -5,15 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-    public void PlayGame()
+    [SerializeField]
+    private Animator animator;
+
+    private int levelToLoad;
+
+    private static readonly int MAINMENU = 0;
+
+    public void FadeToNextLevel()
     {
-        //Loads first level after Main Menu
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //Loads Next Level in the Build Queue
+        int bitsh = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log(bitsh);
+        FadeToLevel(bitsh);
+    }
+
+    public void FadeToLevel(int levelIndex)
+    {
+        Debug.Log(levelIndex);
+        levelToLoad = levelIndex;
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        //Loads scene when Fade Animation is completed
+        //Debug.Log(levelToLoad);
+        SceneManager.LoadScene(1);
     }
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        //Loads Main Menu Scene
+        FadeToLevel(MAINMENU);
         Time.timeScale = 1;
     }
 
