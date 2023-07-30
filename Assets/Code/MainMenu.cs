@@ -8,7 +8,8 @@ public class MainMenu : MonoBehaviour {
     [SerializeField]
     private Animator animator;
 
-    private int levelToLoad;
+    [SerializeField]
+    private static int levelToLoad;
 
     private static readonly int MAINMENU = 0;
 
@@ -30,8 +31,8 @@ public class MainMenu : MonoBehaviour {
     public void OnFadeComplete()
     {
         //Loads scene when Fade Animation is completed
-        //Debug.Log(levelToLoad);
-        SceneManager.LoadScene(1);
+        Debug.Log(levelToLoad);
+        SceneManager.LoadScene(levelToLoad);
     }
 
     public void LoadMainMenu()
