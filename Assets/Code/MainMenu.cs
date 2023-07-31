@@ -16,14 +16,11 @@ public class MainMenu : MonoBehaviour {
     public void FadeToNextLevel()
     {
         //Loads Next Level in the Build Queue
-        int bitsh = SceneManager.GetActiveScene().buildIndex + 1;
-        Debug.Log(bitsh);
-        FadeToLevel(bitsh);
+        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void FadeToLevel(int levelIndex)
     {
-        Debug.Log(levelIndex);
         levelToLoad = levelIndex;
         animator.SetTrigger("FadeOut");
     }
@@ -31,7 +28,6 @@ public class MainMenu : MonoBehaviour {
     public void OnFadeComplete()
     {
         //Loads scene when Fade Animation is completed
-        Debug.Log(levelToLoad);
         SceneManager.LoadScene(levelToLoad);
     }
 
@@ -53,5 +49,4 @@ public class MainMenu : MonoBehaviour {
         //Exits the application
         Application.Quit();
     }
-
 }
