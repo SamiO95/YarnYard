@@ -11,6 +11,7 @@ public class PauseScript : MonoBehaviour
     public event ResumeDelegate ResumeEvent;
     public GameObject gameOverMenu;
     public GameObject optionsMenu;
+    public GameObject winMenu;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameOverMenu.activeInHierarchy && !optionsMenu.activeInHierarchy)
+        if (!gameOverMenu.activeInHierarchy && !optionsMenu.activeInHierarchy && !winMenu.activeInHierarchy)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

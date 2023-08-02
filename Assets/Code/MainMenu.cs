@@ -24,8 +24,6 @@ public class MainMenu : MonoBehaviour {
         levelToLoad = levelIndex;
         Debug.Log("Fadeout Started");
         animator.SetTrigger("FadeOut");
-        //Debug.Log("GraveFadeout Started");
-        //animator.SetTrigger("GraveFadeOut");
     }
 
     public void OnFadeComplete()
