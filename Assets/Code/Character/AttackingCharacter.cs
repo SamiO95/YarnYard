@@ -46,7 +46,7 @@ public class AttackingCharacter : Character
         damage = baseDamage;
     }
 
-    public void editBaseDamage(int damageChange)
+    public void EditBaseDamage(int damageChange)
     {
         baseDamage += damageChange;
     }

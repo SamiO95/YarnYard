@@ -62,6 +62,8 @@ public class PlayerCharacter: AttackingCharacter
         return MAXHEALTH;
     }
 
+
+    // Review Enemy Attack
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Enemy"))
