@@ -9,7 +9,7 @@ public class AttackingCharacter : Character
     protected List<IWEAPON> weapons;
     private static readonly int EMPTY = 0;
 
-    protected AttackingCharacter(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons) : base(health)
+    protected AttackingCharacter(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons)
     {
         this.baseDamage = baseDamage;
         this.reloadTime = reloadTime;

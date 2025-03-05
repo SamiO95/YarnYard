@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        FindObjectOfType<PlayerCharacter>().PlayerDeathEvent += YouDied;
+        FindObjectOfType<PlayerCharacter>().DeathEvent += YouDied;
     }
 
     //Sets the Game Over UI to active when the Player dies

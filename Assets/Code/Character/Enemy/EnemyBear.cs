@@ -6,10 +6,10 @@ public class EnemyBear : EnemyCharacter
 {
     public EnemyBear(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons) : base(health, baseDamage, reloadTime, startingWeapons)
     { }
-
+    
     public void SetInstance(int health, int baseDamage, float reloadTime, List<IWEAPON> startingWeapons) 
     {
-        this.health = health;
+        SetHealth(health);
         this.baseDamage = baseDamage;
         this.reloadTime = reloadTime;
 

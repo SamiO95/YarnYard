@@ -15,7 +15,7 @@ public class HealthUI : MonoBehaviour
         player = FindObjectOfType<PlayerCharacter>();
         if (player != null)
         {
-            player.PlayerDamagedEvent += UpdateHealthUI;
+            player.DamagedEvent += UpdateHealthUI;
             healthSlider.maxValue = player.GetPlayerMaxHealth();
         }
     }

@@ -3,38 +3,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /*
- 
     Character Class
     The character class signifies an object,
-    that is able to take damage and die through the interface ITAKEDAMAGE.
-
+    able to take damage and die through the interface ITAKEDAMAGE,
+    and behave a certain way through the IBEHAVIOUR interface.
+    Timer Utility should later be moved to be its own class.
 */
-public class Character: MonoBehaviour, ITAKEDAMAGE
+public class Character : MonoBehaviour, ITAKEDAMAGE
 {
-    private int DEAD = 0;
-    protected int health;
-    public delegate void DeathEvent();
-    public delegate void DamageTakenEvent();
+    //Events for handling Character response upon ITAKEDAMAGE
+    public delegate void DamageTakenDeligate();
+    public delegate void DeathDeligate();
+    public event DeathDeligate DeathEvent;
+    public event DamageTakenDeligate DamagedEvent;
 
-    protected Character(int health) 
+    private List<IBEHAVIOUR> actions;
+    private int health;
+    private readonly int DEAD = 0;
+
+
+    //Enables an action to be run during runtime
+    public void FixedUpdate()
     {
-        this.health = health;
+        if (actions != null)
+        {
+            foreach (IBEHAVIOUR act in actions)
+            {
+                act.Behave();
+            }
+        }
     }
 
+    //Makes the character take damage, invoking the DamagedEvent, and die, invoking the DieEvent. 
     public void TakeDamage(int damage) 
     {
         if ((health - damage) <= DEAD) 
         {
             health = DEAD;
-
-            Die();
+            if (DeathEvent != null)
+            {
+                DeathEvent?.Invoke();
+            }
+                
             return;
         }
 
         health -= damage;
-        DamageTaken();
+        if (DamagedEvent != null)
+        {
+            DamagedEvent?.Invoke();
+        }
+    }
+  
+    //Enables Children to add/change behaviour
+    protected void AddBehaviour(IBEHAVIOUR act) 
+    {
+        if (actions != null)
+        {
+            actions.Add(act);
+        }
+        else
+        {
+            actions = new List<IBEHAVIOUR>(){act};
+        }
     }
 
+    //Enables Children to set/get health
+    protected void SetHealth(int health) 
+    {
+        this.health = health;
+    }
+
+    protected int GetHealth() 
+    {
+        return health;    
+    }
+
+    //Timer utility
     protected void SetTimer(float _Time, Action _TimerAction)
     {
         StartCoroutine(Timer(_Time, _TimerAction));
@@ -46,7 +91,4 @@ public class Character: MonoBehaviour, ITAKEDAMAGE
 
         _TimerAction();
     }
-
-    protected virtual void Die(){}
-    protected virtual void DamageTaken() { }
 }

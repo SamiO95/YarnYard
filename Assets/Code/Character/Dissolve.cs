@@ -12,14 +12,7 @@ public class Dissolve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<EnemyCharacter>().EnemyDeathEvent += EnemyDied;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        GetComponent<EnemyCharacter>().DeathEvent += EnemyDied;
     }
 
     IEnumerator EnemyDissolve()
