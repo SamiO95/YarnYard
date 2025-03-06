@@ -16,8 +16,8 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
     public delegate void DeathDeligate();
     public event DeathDeligate DeathEvent;
     public event DamageTakenDeligate DamagedEvent;
-
     private List<IBEHAVIOUR> actions;
+    private int MAXHEALTH;
     private int health;
     private readonly int DEAD = 0;
 
@@ -55,7 +55,7 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
         }
     }
   
-    //Enables Children to add/change behaviour
+    //Add/change behaviour
     protected void AddBehaviour(IBEHAVIOUR act) 
     {
         if (actions != null)
@@ -66,6 +66,11 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
         {
             actions = new List<IBEHAVIOUR>(){act};
         }
+    }
+
+    protected void SetBehaviour(IBEHAVIOUR act) 
+    {
+        actions = new List<IBEHAVIOUR>() { act };
     }
 
     //Enables Children to set/get health
@@ -79,6 +84,17 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
         return health;    
     }
 
+    //Enables Children to get maxhealth
+    protected int GetMaxHealth()
+    {
+        return MAXHEALTH;
+    }
+
+    protected void SetMaxHealth(int maxHealth)
+    {
+        this.MAXHEALTH = maxHealth;
+    }
+    
     //Timer utility
     protected void SetTimer(float _Time, Action _TimerAction)
     {

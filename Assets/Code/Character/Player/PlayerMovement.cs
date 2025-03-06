@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class MovementTest : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IBEHAVIOUR
 {
     [SerializeField]
-    float speed = 0.1f;
+    float speed = 0.5f;
 
-    // Update is called once per frame
-    void FixedUpdate()
+    public void Behave()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
@@ -37,6 +35,4 @@ public class MovementTest : MonoBehaviour
             }
         }
     }
-
-    
 }

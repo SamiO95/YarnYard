@@ -2,11 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCharacter : AttackingCharacter
+public class EnemyCharacter : Character
 {
-    protected EnemyCharacter(int health, int baseDamage, float reloadTimer, List<IWEAPON> startingWeapons) : base(health, baseDamage, reloadTimer, startingWeapons) { }    
+    public int GetEnemyHealth() 
+    {
+        return GetHealth();
+    }
 
-    
+    public void SetEnemyHealth(int health) 
+    {
+        SetHealth(health);
+    }
 
+    public void AddEnemyBehaviour(IBEHAVIOUR act)
+    {
+        AddBehaviour(act);
+    }
+    public void SetEnemyBehaviour(IBEHAVIOUR act)
+    {
+        SetBehaviour(act);
+    }
 
+    public void SetEnemyMaxHealth(int maxHealth)
+    {
+        SetMaxHealth(maxHealth);
+    }
 }

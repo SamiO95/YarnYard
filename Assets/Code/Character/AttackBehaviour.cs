@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class AttackBehaviour : IBEHAVIOUR
 {
-    protected int damage;
-    protected List<IWEAPON> weapons;
+    private int damage;
+    private List<IWEAPON> weapons;
 
-    protected AttackBehaviour(int damage, List<IWEAPON> startingWeapons)
+    public AttackBehaviour(int damage, List<IWEAPON> startingWeapons)
     {
         this.damage = damage;
         weapons = new List<IWEAPON>();
@@ -19,10 +19,10 @@ public class AttackBehaviour : IBEHAVIOUR
     }
 
     public void Behave() 
-    { 
-        
+    {
+        foreach (IWEAPON attack in weapons)
+        {
+            attack.Attack(damage);
+        }
     }
-
-    
-
 }

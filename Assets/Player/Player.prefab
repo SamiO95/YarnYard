@@ -198,8 +198,8 @@ MonoBehaviour:
   - {fileID: 7903045648780944487}
   - {fileID: 2632162822208411091}
   m_Bounds:
-    m_Center: {x: -0.8324857, y: -0.38001728, z: -0.00000083575657}
-    m_Extent: {x: 1.1411655, y: 0.76114845, z: 0.00000059144446}
+    m_Center: {x: -0.8324933, y: -0.38001478, z: -0.00000025509075}
+    m_Extent: {x: 1.1411655, y: 0.76114976, z: 0.00000027360585}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -338,8 +338,8 @@ MonoBehaviour:
   - {fileID: 8900835384860962408}
   - {fileID: 2020682515010905012}
   m_Bounds:
-    m_Center: {x: -0.81173515, y: 0.2866671, z: -0.00000038938288}
-    m_Extent: {x: 1.1811788, y: 0.91102695, z: 0.00000045934024}
+    m_Center: {x: -0.8117466, y: 0.2866671, z: -0.000000034721722}
+    m_Extent: {x: 1.1811445, y: 0.91102505, z: 0.00000027784432}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -544,8 +544,8 @@ MonoBehaviour:
   - {fileID: 5855906170511631624}
   - {fileID: 3195240967127749295}
   m_Bounds:
-    m_Center: {x: -0.001954317, y: -0.0020982027, z: 0.000000026555881}
-    m_Extent: {x: 1.5769951, y: 1.9929004, z: 0.0000009862108}
+    m_Center: {x: -0.0019772053, y: -0.0020996332, z: 0.000000057518633}
+    m_Extent: {x: 1.5770257, y: 1.9928999, z: 0.0000003270113}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -681,7 +681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6725834943642695202}
-  - component: {fileID: 7629609397150244655}
+  - component: {fileID: 8554634245608804043}
   - component: {fileID: 1909824540118353271}
   - component: {fileID: 3782453368472410370}
   - component: {fileID: 4416315035553358562}
@@ -710,7 +710,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7629609397150244655
+--- !u!114 &8554634245608804043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6725834943642695205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb1ce062f8c80e4393cc51665b462c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e509b00cb828a74ca11f14752b22755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
@@ -735,6 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eeff4ca57184384aa709a1fd784fff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MAXHEALTH: 100
+  playerObject: {fileID: 6725834943642695205}
 --- !u!54 &3782453368472410370
 Rigidbody:
   m_ObjectHideFlags: 0

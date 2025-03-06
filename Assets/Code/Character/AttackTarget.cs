@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class AttackTarget : IWEAPON
 {
-    [SerializeField]
-    private float damageRadius;
-    [SerializeField]
-    private int damage;
-    [SerializeField]
-    private GameObject target;
-    [SerializeField]
-    private GameObject character;
+    private readonly float damageRadius;
+    private readonly GameObject target;
+    private readonly GameObject character;
 
-    public AttackTarget(float damageRadius, int damage, GameObject target, GameObject character)
+    public AttackTarget(float damageRadius, GameObject target, GameObject character)
     {
-        this.damage = damage;
         this.target = target;
         this.damageRadius = damageRadius;
         this.character = character;
@@ -27,7 +21,6 @@ public class AttackTarget : IWEAPON
 
         if (damageable != null)
         {
-
             //Distance to target (x_2 - x_1), y, (z_2 - z_1)
             Vector3 vectorToTarget = new Vector3(target.transform.position.x - character.transform.position.x, character.transform.position.y, target.transform.position.z - character.transform.position.z);
 
@@ -37,7 +30,7 @@ public class AttackTarget : IWEAPON
             //check if distance is less than damage radius
             if (distance < damageRadius)
             {
-                damageable.TakeDamage(this.damage);
+                damageable.TakeDamage(damage);
             }
         }
     }

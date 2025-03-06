@@ -2,20 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIMovement : MonoBehaviour
+public class AIMovement : MonoBehaviour, IBEHAVIOUR
 {
-    [SerializeField]
     private float speed;
-    [SerializeField]
     private GameObject obj;
 
-    AIMovement(float speed, GameObject obj) 
-    {
-        this.obj = obj;
-        this.speed = speed;
-    }
-
-    private void FixedUpdate()
+    public void Behave()
     {
         //Distance to target (x_2 - x_1), y, (z_2 - z_1)
         Vector3 vectorToTarget = new Vector3(obj.transform.position.x - transform.position.x, transform.position.y, obj.transform.position.z - transform.position.z);
@@ -33,6 +25,11 @@ public class AIMovement : MonoBehaviour
     public void SetObject(GameObject obj)
     {
         this.obj = obj; 
+    }
+
+    public void SetMovementSpeed(float speed) 
+    {
+        this.speed = speed;
     }
 
 }

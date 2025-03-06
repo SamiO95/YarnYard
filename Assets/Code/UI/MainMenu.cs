@@ -22,7 +22,6 @@ public class MainMenu : MonoBehaviour {
     public void FadeToLevel(int levelIndex)
     {
         levelToLoad = levelIndex;
-        Debug.Log("Fadeout Started");
         animator.SetTrigger("FadeOut");
     }
 
