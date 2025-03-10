@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICREATE
 {
-    public GameObject Create(DifficultyCalculator _Difficulty);
+    public List<GameObject> Create(DifficultyCalculator _Difficulty);
 }

@@ -17,11 +17,13 @@ public class EnemySpawner : MonoBehaviour
     private GameObject bearPrefab;
 
     CreateBear bearCreater;
+    DifficultyCalculator difficulty;
 
     private void Start()
     {
         bearCreater = gameObject.AddComponent<CreateBear>();
         bearCreater.SetBearPrefab(bearPrefab);
+        difficulty = new DifficultyCalculator();
     }
 
     [SerializeField]
@@ -68,7 +70,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnDirection = spawnRotation * Vector3.forward;
             Vector3 spawnPosition = esp + spawnDirection * spawnRadius;
 
-            GameObject enemy = bearCreater.Create(Time.deltaTime, gameObject);
+            GameObject enemy = bearCreater.Create(difficulty);
             enemy.transform.position = spawnPosition;
             enemy.transform.rotation = spawnRotation;
         }
@@ -84,12 +86,11 @@ public class EnemySpawner : MonoBehaviour
             float randomX = Random.Range(-50f, 50f); 
             float randomZ = Random.Range(-50f, 50f);
 
-            Vector3 spawnPosition = new Vector3(playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
+            Vector3 spawnPosition = new (playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
             Quaternion spawnRotation = Quaternion.identity;
 
-            GameObject enemy = bearCreater.Create(Time.deltaTime, gameObject);
-            enemy.transform.position = spawnPosition;
-            enemy.transform.rotation = spawnRotation;
+            GameObject enemy = bearCreater.Create(difficulty);
+            enemy.transform.SetPositionAndRotation(spawnPosition, spawnRotation);
 
             enemiesSpawned++;
             yield return new WaitForSeconds(1f);

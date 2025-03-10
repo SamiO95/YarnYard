@@ -8,22 +8,19 @@ public class CreateBear : MonoBehaviour, ICREATE
     GameObject bearPrefab;
 
     private readonly int BASEHEALTH = 10; 
-    private readonly float HEALTHMOD = 10.1f;
     private readonly int BASEDAMAGE = 10;
-    private readonly float DAMAGEMOD = 10.1f;
     private readonly float MELEERANGE = 5f;
     private readonly float MOVEMENTSPEED = 0.3f;
 
 
-    public GameObject Create(float time, GameObject player)
+    public GameObject Create(DifficultyCalculator difficulty)
     { 
         GameObject bear = Instantiate(bearPrefab);
         bear.transform.up = Vector3.up;
 
-        float bearHealth = BASEHEALTH + time * HEALTHMOD;
-        float bearDamage = BASEDAMAGE + time * DAMAGEMOD;
-        List<IWEAPON> bearAttacks = new List<IWEAPON>();
-        bearAttacks.Add(CreateNewBearAttack(player, bear));
+        float bearHealth = BASEHEALTH + difficulty.GetTimeDifficultyMod();
+        float bearDamage = BASEDAMAGE + difficulty.GetTimeDifficultyMod();
+        List<IWEAPON> bearAttacks = new () { CreateNewBearAttack(gameObject, bear) };
 
         EnemyCharacter bearChar = bear.GetComponent<EnemyCharacter>();
         bearChar.SetEnemyHealth((int)bearHealth);
@@ -31,7 +28,7 @@ public class CreateBear : MonoBehaviour, ICREATE
         bearChar.AddEnemyBehaviour(new AttackBehaviour((int)bearDamage, bearAttacks));
 
         AIMovement bearMovement = bear.GetComponent<AIMovement>();
-        bearMovement.SetObject(player);
+        bearMovement.SetObject(gameObject);
         bearMovement.SetMovementSpeed(MOVEMENTSPEED);
         bearChar.AddEnemyBehaviour(bearMovement);
         

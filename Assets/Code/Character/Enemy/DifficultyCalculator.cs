@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DifficultyCalculator : MonoBehaviour
+public class DifficultyCalculator
 {
     private enum Difficulty { Easy, Normal, Hard };
 

@@ -17,7 +17,13 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         //WaveFinishedEvent += SpawnWave;
     }
-    private void SpawnWave() 
+
+    private void SetSpawnWave() 
+    {
+        StartCoroutine(SpawnWave());
+    }
+        
+    private IEnumerator SpawnWave() 
     {
         if (WaveStartedEvent != null)
         {
@@ -28,6 +34,8 @@ public class EnemyWaveSpawner : MonoBehaviour
         {
             factory.Create(difficulty);
         }
+
+        yield return new WaitForSeconds(difficulty.GetTimeDifficultyMod());
 
         if (WaveFinishedEvent != null)
         {
