@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICREATE
 {
-    public GameObject Create(float time, GameObject player);
+    public GameObject Create(DifficultyCalculator _Difficulty);
 }

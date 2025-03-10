@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Created by Felicia Hjärpe
+
 public class MainMenu : MonoBehaviour {
 
     [SerializeField]
