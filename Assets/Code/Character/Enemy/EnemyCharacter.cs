@@ -8,12 +8,14 @@ public class EnemyCharacter : Character
     {
         return GetHealth();
     }
-
     public void SetEnemyHealth(int health) 
     {
         SetHealth(health);
     }
-
+    public void SetEnemyMaxHealth(int maxHealth)
+    {
+        SetMaxHealth(maxHealth);
+    }
     public void AddEnemyBehaviour(IBEHAVIOUR act)
     {
         AddBehaviour(act);
@@ -21,10 +23,5 @@ public class EnemyCharacter : Character
     public void SetEnemyBehaviour(IBEHAVIOUR act)
     {
         SetBehaviour(act);
-    }
-
-    public void SetEnemyMaxHealth(int maxHealth)
-    {
-        SetMaxHealth(maxHealth);
     }
 }

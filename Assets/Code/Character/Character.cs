@@ -16,11 +16,12 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
     public delegate void DeathDeligate();
     public event DeathDeligate DeathEvent;
     public event DamageTakenDeligate DamagedEvent;
+
     private List<IBEHAVIOUR> actions;
+
     private int MAXHEALTH;
     private int health;
     private readonly int DEAD = 0;
-
 
     //Enables an action to be run during runtime
     public void FixedUpdate()
@@ -33,7 +34,6 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
             }
         }
     }
-
     //Makes the character take damage, invoking the DamagedEvent, and die, invoking the DieEvent. 
     public void TakeDamage(int damage) 
     {
@@ -54,7 +54,6 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
             DamagedEvent?.Invoke();
         }
     }
-  
     //Add/change behaviour
     protected void AddBehaviour(IBEHAVIOUR act) 
     {
@@ -67,35 +66,37 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
             actions = new List<IBEHAVIOUR>(){act};
         }
     }
-
     protected void SetBehaviour(IBEHAVIOUR act) 
     {
         actions = new List<IBEHAVIOUR>() { act };
     }
-
     //Enables Children to set/get health
     protected void SetHealth(int health) 
     {
-        this.health = health;
+        if (health < MAXHEALTH)
+        {
+            this.health = health;
+        }
+        else
+        {
+            this.health = MAXHEALTH;
+        }
     }
-
     protected int GetHealth() 
     {
         return health;    
     }
-
-    //Enables Children to get maxhealth
+    //Enables Children to get/set maxhealth
     protected int GetMaxHealth()
     {
         return MAXHEALTH;
     }
-
     protected void SetMaxHealth(int maxHealth)
     {
         this.MAXHEALTH = maxHealth;
     }
     
-    //Timer utility
+    //Timer utility, May be moved for more apt application
     protected void SetTimer(float _Time, Action _TimerAction)
     {
         StartCoroutine(Timer(_Time, _TimerAction));

@@ -14,6 +14,10 @@ public class Dissolve : MonoBehaviour
     {
         gameObject.GetComponent<EnemyCharacter>().DeathEvent += EnemyDied;
     }
+    public void EnemyDied()
+    {
+        StartCoroutine(EnemyDissolve());
+    }
 
     IEnumerator EnemyDissolve()
     {
@@ -30,13 +34,5 @@ public class Dissolve : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-
-
-    }
-
-    public void EnemyDied()
-    {
-        StartCoroutine(EnemyDissolve());
-
     }
 }

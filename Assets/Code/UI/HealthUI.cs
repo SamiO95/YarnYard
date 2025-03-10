@@ -3,25 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+    Made by Felicia Hjärpe & Charlie Ahlstrand
+
+    All deligates and UpdateHpMaxUI added, UpdateHpUI changed, by Charlie Ahlstrand.
+ 
+*/
+
 public class HealthUI : MonoBehaviour
 {
     [SerializeField]
     private Slider healthSlider;
     private PlayerCharacter player;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerCharacter>();
         if (player != null)
         {
-            player.DamagedEvent += UpdateHealthUI;
+            player.DamagedEvent += UpdateHpUI;
+            player.HpSetEvent += UpdateHpUI;
+            player.MaxHpSetEvent += UpdateHpMaxUI;
             healthSlider.maxValue = player.GetPlayerMaxHealth();
         }
     }
 
-    public void UpdateHealthUI()
+    public void UpdateHpUI()
     {
         healthSlider.value = player.GetPlayerHealth();
+    }
+
+    public void UpdateHpMaxUI() 
+    {
+        healthSlider.maxValue = player.GetPlayerMaxHealth();
     }
 }
