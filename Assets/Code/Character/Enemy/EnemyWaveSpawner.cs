@@ -9,12 +9,14 @@ public class EnemyWaveSpawner : MonoBehaviour
     public event EnemyWaveDeligate WaveStartedEvent;
     public event EnemyWaveDeligate WaveFinishedEvent;
 
-    DifficultyCalculator difficulty;
+    //Temp, should be made depending on chosen difficulty.
+    DifficultyCalculator difficulty = new ();
     List<EnemyFactory> enemyFactories;
 
     // Initialization of EnemyWaveSpawner
     private void Start()
     {
+        
         //WaveFinishedEvent += SpawnWave;
     }
 
@@ -32,7 +34,9 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         foreach (EnemyFactory factory in enemyFactories)
         {
-            factory.Create(difficulty);
+            List<GameObject> enemies = factory.Create(difficulty);
+            OrderEnemies(enemies);
+            WakeEnemies(enemies);
         }
 
         yield return new WaitForSeconds(difficulty.GetTimeDifficultyMod());
@@ -40,6 +44,24 @@ public class EnemyWaveSpawner : MonoBehaviour
         if (WaveFinishedEvent != null)
         {
             WaveStartedEvent?.Invoke();
+        }
+    }
+
+    private void OrderEnemies(List<GameObject> unorderedEnemies) 
+    {
+        foreach (GameObject enemy in unorderedEnemies)
+        {
+            Vector3 spawnPosition = this.transform.position;
+            
+            enemy.transform.position = spawnPosition;
+        }
+    }
+
+    private void WakeEnemies(List<GameObject> enemies) 
+    {
+        foreach (GameObject enemy in enemies) 
+        {
+            enemy.SetActive(true);
         }
     }
 }

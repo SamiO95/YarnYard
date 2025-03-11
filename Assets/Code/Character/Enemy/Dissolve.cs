@@ -31,7 +31,7 @@ public class Dissolve : MonoBehaviour
 
             yield return new WaitForSeconds(activationDuration);
 
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
 
         }
     }

@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.ProBuilder;
 
 public enum SpawnMode
 {
@@ -70,9 +67,13 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnDirection = spawnRotation * Vector3.forward;
             Vector3 spawnPosition = esp + spawnDirection * spawnRadius;
 
-            GameObject enemy = bearCreater.Create(difficulty);
-            enemy.transform.position = spawnPosition;
-            enemy.transform.rotation = spawnRotation;
+            List<GameObject> enemies = bearCreater.Create(difficulty);
+
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.transform.SetPositionAndRotation(spawnPosition, spawnRotation);
+            }
+
         }
     }
 
@@ -89,8 +90,12 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnPosition = new (playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
             Quaternion spawnRotation = Quaternion.identity;
 
-            GameObject enemy = bearCreater.Create(difficulty);
-            enemy.transform.SetPositionAndRotation(spawnPosition, spawnRotation);
+            List<GameObject> enemies = bearCreater.Create(difficulty);
+
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.transform.SetPositionAndRotation(spawnPosition, spawnRotation);
+            }
 
             enemiesSpawned++;
             yield return new WaitForSeconds(1f);

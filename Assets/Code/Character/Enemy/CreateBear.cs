@@ -13,7 +13,7 @@ public class CreateBear : MonoBehaviour, ICREATE
     private readonly float MOVEMENTSPEED = 0.3f;
 
 
-    public GameObject Create(DifficultyCalculator difficulty)
+    public List<GameObject> Create(DifficultyCalculator difficulty)
     { 
         GameObject bear = Instantiate(bearPrefab);
         bear.transform.up = Vector3.up;
@@ -31,8 +31,10 @@ public class CreateBear : MonoBehaviour, ICREATE
         bearMovement.SetObject(gameObject);
         bearMovement.SetMovementSpeed(MOVEMENTSPEED);
         bearChar.AddEnemyBehaviour(bearMovement);
-        
-        return bear;
+
+        List<GameObject> bears = new () { bear };
+
+        return bears;
     }
 
     public void SetBearPrefab(GameObject bearPrefab)
