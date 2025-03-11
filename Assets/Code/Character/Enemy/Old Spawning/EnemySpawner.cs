@@ -20,7 +20,6 @@ public class EnemySpawner : MonoBehaviour
     {
         bearCreater = gameObject.AddComponent<CreateBear>();
         bearCreater.SetBearPrefab(bearPrefab);
-        difficulty = new DifficultyCalculator();
     }
 
     [SerializeField]
@@ -67,7 +66,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnDirection = spawnRotation * Vector3.forward;
             Vector3 spawnPosition = esp + spawnDirection * spawnRadius;
 
-            List<GameObject> enemies = bearCreater.Create(difficulty);
+            List<GameObject> enemies = bearCreater.Create();
 
             foreach (GameObject enemy in enemies)
             {
@@ -90,7 +89,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 spawnPosition = new (playerPosition.x + randomX, playerPosition.y, playerPosition.z + randomZ);
             Quaternion spawnRotation = Quaternion.identity;
 
-            List<GameObject> enemies = bearCreater.Create(difficulty);
+            List<GameObject> enemies = bearCreater.Create();
 
             foreach (GameObject enemy in enemies)
             {

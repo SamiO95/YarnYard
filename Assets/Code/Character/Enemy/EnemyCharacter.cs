@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EnemyCharacter : Character
 {
+    public void WakeEnemy() 
+    {
+        this.gameObject.SetActive(true);
+    }
     public int GetEnemyHealth() 
     {
         return GetHealth();

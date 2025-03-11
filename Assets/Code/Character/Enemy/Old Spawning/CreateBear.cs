@@ -13,13 +13,13 @@ public class CreateBear : MonoBehaviour, ICREATE
     private readonly float MOVEMENTSPEED = 0.3f;
 
 
-    public List<GameObject> Create(DifficultyCalculator difficulty)
+    public List<GameObject> Create()
     { 
         GameObject bear = Instantiate(bearPrefab);
         bear.transform.up = Vector3.up;
 
-        float bearHealth = BASEHEALTH + difficulty.GetTimeDifficultyMod();
-        float bearDamage = BASEDAMAGE + difficulty.GetTimeDifficultyMod();
+        float bearHealth = BASEHEALTH;
+        float bearDamage = BASEDAMAGE;
         List<IWEAPON> bearAttacks = new () { CreateNewBearAttack(gameObject, bear) };
 
         EnemyCharacter bearChar = bear.GetComponent<EnemyCharacter>();

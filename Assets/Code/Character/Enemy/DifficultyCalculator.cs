@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DifficultyCalculator
 {
+    public DifficultyCalculator(int difficulty) 
+    {
+        SetDifficulty(difficulty);
+    }
+
     private enum Difficulty { Easy, Normal, Hard };
 
     private Difficulty _Difficulty = Difficulty.Normal;
