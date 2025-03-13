@@ -3,5 +3,5 @@ using UnityEngine;
 
 public interface ICREATE
 {
-    public List<GameObject> Create();
+    public List<GameObject> Create(IINSTRUCTOR instructor);
 }
