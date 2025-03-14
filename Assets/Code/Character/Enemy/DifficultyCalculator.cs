@@ -11,7 +11,7 @@ public class DifficultyCalculator
 
     private enum Difficulty { Easy, Normal, Hard };
 
-    private Difficulty _Difficulty = Difficulty.Normal;
+    private Difficulty difficulty = Difficulty.Normal;
 
     private readonly float TIMEMOD = 10f;
     private readonly float EASYMOD = 0.5f;
@@ -20,7 +20,7 @@ public class DifficultyCalculator
 
     public float GetTimeDifficultyMod() 
     {
-        return _Difficulty switch
+        return difficulty switch
         {
             Difficulty.Easy => (Time.deltaTime * TIMEMOD * EASYMOD),
             Difficulty.Normal => (Time.deltaTime * TIMEMOD * NORMALMOD),
@@ -28,11 +28,11 @@ public class DifficultyCalculator
         };
     }
 
-    public void SetDifficulty(int _Difficulty) 
+    public void SetDifficulty(int difficulty) 
     {
-        if(_Difficulty >= 0 && _Difficulty <= 2)
+        if(difficulty >= 0 && difficulty <= 2)
         { 
-            this._Difficulty = _Difficulty switch 
+            this.difficulty = difficulty switch 
             { 
                 0 => Difficulty.Easy,
                 1 => Difficulty.Normal,

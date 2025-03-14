@@ -10,7 +10,7 @@ public class PlayerCharacter : Character
 
     [SerializeField]
     private int PLAYERMAXHEALTH = 100;
-    List<IBEHAVIOUR> playerAttacks;
+    private List<IBEHAVIOUR> playerAttacks;
 
     public void Start() 
     {

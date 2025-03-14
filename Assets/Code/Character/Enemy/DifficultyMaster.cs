@@ -9,9 +9,9 @@ using UnityEngine;
 */
 public class DifficultyMaster : MonoBehaviour, IINSTRUCTOR
 {
-    private int difficultyInt = 1;
-    private int maxNumberOfEnemies = 100;
-    private int maxAvailableGet = 20;
+    private readonly int difficultyInt = 1;
+    private readonly int maxNumberOfEnemies = 100;
+    private readonly int maxAvailableGet = 20;
 
     [SerializeField]
     private GameObject enemyBase;

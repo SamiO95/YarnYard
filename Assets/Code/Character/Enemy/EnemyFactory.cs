@@ -21,9 +21,7 @@ public class EnemyFactory : ICREATE
                 ConstructEnemy(enemy, difficultyMaster);
             }
         }
-    
         return enemies;
     }
-
     protected virtual EnemyCharacter ConstructEnemy(EnemyCharacter enemy, IINSTRUCTOR instructor) { return enemy; }
 }

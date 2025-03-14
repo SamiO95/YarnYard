@@ -685,7 +685,8 @@ GameObject:
   - component: {fileID: 1909824540118353271}
   - component: {fileID: 3782453368472410370}
   - component: {fileID: 4416315035553358562}
-  - component: {fileID: 3059770240545072130}
+  - component: {fileID: 96057163227692453}
+  - component: {fileID: 1570779980517223001}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -765,7 +766,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 1.4, z: 1.7}
---- !u!114 &3059770240545072130
+--- !u!114 &96057163227692453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -774,13 +775,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6725834943642695205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2abe30d56897d444d8af9b4489d071c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 294476b4397353143bf72768c5f41538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bearPrefab: {fileID: 1352131335145265382, guid: d3865b3236906ea4b9ba4caece21c37c, type: 3}
-  numEnemies: 5
-  spawnRadius: 5
-  spawnMode: 0
+--- !u!114 &1570779980517223001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6725834943642695205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cbad65ef2e6564a91c52498ad4742a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBase: {fileID: 1352131335145265382, guid: d3865b3236906ea4b9ba4caece21c37c, type: 3}
+  storageLocation: {fileID: 0}
 --- !u!1 &6725834944213873028
 GameObject:
   m_ObjectHideFlags: 0

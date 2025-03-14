@@ -29,7 +29,6 @@ public class BearFactory : EnemyFactory
 
         return enemy;
     }
-
     private IWEAPON CreateNewBearAttack(GameObject player, GameObject bear)
     {
         return new AttackTarget(BASEMELEERANGE, player, bear);

@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ 
+  Enemy wave spawner handles the activation, placement and timing of Enemies.
+ 
+  @Author: Charlie Ahlstrand
+ 
+*/
 public class EnemyWaveSpawner : MonoBehaviour
 {
     private readonly int SPAWNSPACER = 10;
@@ -21,7 +28,8 @@ public class EnemyWaveSpawner : MonoBehaviour
         difficultyMaster = gameObject.GetComponent<DifficultyMaster>();
         //Temp
         enemyFactories = new List<EnemyFactory>() { new BearFactory() };
-    
+
+        SetSpawnWave();
         //WaveFinishedEvent += SetSpawnWave;
     }
     private void SetSpawnWave() 
@@ -58,15 +66,14 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         foreach (GameObject enemy in unorderedEnemies)
         {
-            float randomX = SPAWNSPACER + UnityEngine.Random.Range(-50f, 50f);
-            float randomZ = SPAWNSPACER + UnityEngine.Random.Range(-50f, 50f);
+            float randomX = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
+            float randomZ = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
 
             Vector3 spawnPosition = new (target.position.x + randomX, target.position.y, target.position.z + randomZ);
 
             enemy.transform.position = spawnPosition;
         }
     }
-
     private void WakeEnemies(List<GameObject> enemies) 
     {
         foreach (GameObject enemy in enemies) 
