@@ -9,15 +9,14 @@ public class PlayerCharacter : Character
     public event HealthSetDeligate HpSetEvent;
 
     [SerializeField]
-    private int PLAYERMAXHEALTH = 100;
+    private int PLAYERMAXHEALTH;
     private List<IBEHAVIOUR> playerAttacks;
 
     public void Start() 
     {
-        SetHealth(PLAYERMAXHEALTH);
         SetMaxHealth(PLAYERMAXHEALTH);
+        SetHealth(PLAYERMAXHEALTH);
         AddBehaviour(this.gameObject.GetComponent<PlayerMovement>());
-        
     
         /*foreach (IBEHAVIOUR act in playerAttacks)
         {

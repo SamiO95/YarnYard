@@ -34,9 +34,15 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
             }
         }
     }
+    public GameObject GetDamagableCharacter()
+    {
+        return gameObject;
+    }
     //Makes the character take damage, invoking the DamagedEvent, and die, invoking the DieEvent. 
     public void TakeDamage(int damage) 
     {
+        Debug.Log("Damage: " + damage);
+
         if ((health - damage) <= DEAD) 
         {
             health = DEAD;
@@ -97,15 +103,16 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
     }
     
     //Timer utility, May be moved for more apt application
-    protected void SetTimer(float _Time, Action _TimerAction)
+    public void SetTimer(float time, Action timerAction)
     {
-        StartCoroutine(Timer(_Time, _TimerAction));
+        StartCoroutine(Timer(time, timerAction));
     }
 
-    private IEnumerator Timer(float _Time, Action _TimerAction)
+    private IEnumerator Timer(float time, Action timerAction)
     {
-        yield return new WaitForSeconds(_Time);
+        yield return new WaitForSeconds(time);
 
-        _TimerAction();
+        timerAction();
     }
+
 }

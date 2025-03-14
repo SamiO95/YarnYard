@@ -69,9 +69,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             float randomX = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
             float randomZ = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
 
-            Vector3 spawnPosition = new (target.position.x + randomX, target.position.y, target.position.z + randomZ);
-
-            enemy.transform.position = spawnPosition;
+            enemy.transform.SetPositionAndRotation(new(target.position.x + randomX, target.position.y, target.position.z + randomZ), Quaternion.identity);
         }
     }
     private void WakeEnemies(List<GameObject> enemies) 

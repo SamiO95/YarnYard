@@ -7,6 +7,7 @@ public class BearFactory : EnemyFactory
     private readonly int BASEMAXHEALTH = 50;
     private readonly int BASEDAMAGE = 1;
     private readonly float BASEMELEERANGE = 5f;
+    private readonly float ATTACKCOOLDOWN = 5f;
     private readonly float BASEMOVEMENTSPEED = 0.3f;
 
     protected override EnemyCharacter ConstructEnemy(EnemyCharacter enemy, IINSTRUCTOR difficultyMaster)
@@ -18,9 +19,10 @@ public class BearFactory : EnemyFactory
         enemy.SetEnemyHealth((int)bearHealth);
         enemy.SetEnemyMaxHealth((int)bearHealth);
 
-        float bearDamage = Random.Range(BASEDAMAGE, BASEDAMAGE * difficultyMod);
+        float bearDamage = BASEDAMAGE + Random.Range(BASEDAMAGE, BASEDAMAGE * difficultyMod);
         List<IWEAPON> bearAttacks = new () { CreateNewBearAttack(target, enemy.gameObject) };
         enemy.AddEnemyBehaviour(new AttackBehaviour((int)bearDamage, bearAttacks));
+        Debug.Log("Beardamageset: " + bearDamage);
 
         AIMovement bearMovement = enemy.gameObject.GetComponent<AIMovement>();
         bearMovement.SetTarget(target);
@@ -31,7 +33,7 @@ public class BearFactory : EnemyFactory
     }
     private IWEAPON CreateNewBearAttack(GameObject player, GameObject bear)
     {
-        return new AttackTarget(BASEMELEERANGE, player, bear);
+        return new AttackTarget(BASEMELEERANGE, ATTACKCOOLDOWN, player.GetComponent<ITAKEDAMAGE>(), bear);
     }
 
 }
