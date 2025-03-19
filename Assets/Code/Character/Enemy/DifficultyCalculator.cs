@@ -24,7 +24,8 @@ public class DifficultyCalculator
         {
             Difficulty.Easy => (Time.deltaTime * TIMEMOD * EASYMOD),
             Difficulty.Normal => (Time.deltaTime * TIMEMOD * NORMALMOD),
-            Difficulty.Hard => (Time.deltaTime * TIMEMOD * HARDMOD)
+            Difficulty.Hard => (Time.deltaTime * TIMEMOD * HARDMOD),
+            _ => (Time.deltaTime * TIMEMOD * NORMALMOD)
         };
     }
 
@@ -36,7 +37,8 @@ public class DifficultyCalculator
             { 
                 0 => Difficulty.Easy,
                 1 => Difficulty.Normal,
-                2 => Difficulty.Hard
+                2 => Difficulty.Hard,
+                _ => Difficulty.Normal
             };
         }
     }

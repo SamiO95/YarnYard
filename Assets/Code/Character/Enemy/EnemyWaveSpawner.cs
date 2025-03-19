@@ -20,17 +20,18 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     //Temp, should be made depending on chosen difficulty.
     DifficultyMaster difficultyMaster;
-    List<EnemyFactory> enemyFactories;
+    List<ICREATE> enemyFactories;
 
     // Initialization of EnemyWaveSpawner
     private void Start()
     {
         difficultyMaster = gameObject.GetComponent<DifficultyMaster>();
+
         //Temp
-        enemyFactories = new List<EnemyFactory>() { new BearFactory() };
+        enemyFactories = new List<ICREATE>() { new BearFactory() };
 
         SetSpawnWave();
-        //WaveFinishedEvent += SetSpawnWave;
+        WaveFinishedEvent += SetSpawnWave;
     }
     private void SetSpawnWave() 
     {
@@ -38,6 +39,8 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
     private IEnumerator SpawnWave() 
     {
+        yield return new WaitForSeconds(10f);
+
         if (WaveStartedEvent != null)
         {
             WaveStartedEvent?.Invoke();
@@ -45,7 +48,7 @@ public class EnemyWaveSpawner : MonoBehaviour
 
         if (enemyFactories.Count != 0 && enemyFactories != null)
         {
-            foreach (EnemyFactory factory in enemyFactories)
+            foreach (ICREATE factory in enemyFactories)
             {
                 List<GameObject> enemies = factory.Create(difficultyMaster);
                 OrderEnemies(enemies);
@@ -53,7 +56,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(difficultyMaster.GetMod());
+        yield return new WaitForSeconds(20f);
 
         if (WaveFinishedEvent != null)
         {
@@ -62,6 +65,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
     private void OrderEnemies(List<GameObject> unorderedEnemies) 
     {
+
         Transform target = difficultyMaster.GetTargetObject().transform;
 
         foreach (GameObject enemy in unorderedEnemies)

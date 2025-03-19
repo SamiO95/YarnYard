@@ -22,7 +22,7 @@ public class DifficultyMaster : MonoBehaviour, IINSTRUCTOR
 
     //Initialization of the DifficultyMaster
     private void Start()
-    {   
+    {
         //Needs to be constructed with getting its difficulty from ui settings (not created yet)
         difficulty = new DifficultyCalculator(difficultyInt);
         GenerateEnemyObjects();

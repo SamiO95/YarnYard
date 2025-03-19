@@ -16,8 +16,9 @@ public class BearFactory : EnemyFactory
         GameObject target = difficultyMaster.GetTargetObject();
 
         float bearHealth = Random.Range(BASEMAXHEALTH, BASEMAXHEALTH * difficultyMod);
-        enemy.SetEnemyHealth((int)bearHealth);
         enemy.SetEnemyMaxHealth((int)bearHealth);
+        enemy.SetEnemyHealth((int)bearHealth);
+        
 
         float bearDamage = BASEDAMAGE + Random.Range(BASEDAMAGE, BASEDAMAGE * difficultyMod);
         List<IWEAPON> bearAttacks = new () { CreateNewBearAttack(target, enemy.gameObject) };
