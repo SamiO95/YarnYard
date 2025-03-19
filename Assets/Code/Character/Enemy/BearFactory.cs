@@ -22,7 +22,6 @@ public class BearFactory : EnemyFactory
         float bearDamage = BASEDAMAGE + Random.Range(BASEDAMAGE, BASEDAMAGE * difficultyMod);
         List<IWEAPON> bearAttacks = new () { CreateNewBearAttack(target, enemy.gameObject) };
         enemy.AddEnemyBehaviour(new AttackBehaviour((int)bearDamage, bearAttacks));
-        Debug.Log("Beardamageset: " + bearDamage);
 
         AIMovement bearMovement = enemy.gameObject.GetComponent<AIMovement>();
         bearMovement.SetTarget(target);

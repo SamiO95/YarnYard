@@ -41,7 +41,6 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
     //Makes the character take damage, invoking the DamagedEvent, and die, invoking the DieEvent. 
     public void TakeDamage(int damage) 
     {
-        Debug.Log("Damage: " + damage);
 
         if ((health - damage) <= DEAD) 
         {
