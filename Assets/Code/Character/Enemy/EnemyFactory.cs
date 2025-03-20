@@ -10,7 +10,6 @@ public class EnemyFactory : ICREATE
     //Takes an instructor that handles objects with EnemyObject
     public List<GameObject> Create(IINSTRUCTOR difficultyMaster)
     {
-
         List<GameObject> enemies = difficultyMaster.GetAvailableObjects();
         
         foreach (GameObject enemyObject in enemies)

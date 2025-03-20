@@ -12,7 +12,7 @@ using UnityEngine;
 */
 public class EnemyWaveSpawner : MonoBehaviour
 {
-    private readonly int SPAWNSPACER = 10;
+    private readonly int SPAWNSPACER = 20;
 
     public delegate void EnemyWaveDeligate();
     public event EnemyWaveDeligate WaveStartedEvent;
@@ -39,7 +39,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
     private IEnumerator SpawnWave() 
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
 
         if (WaveStartedEvent != null)
         {
@@ -51,8 +51,14 @@ public class EnemyWaveSpawner : MonoBehaviour
             foreach (ICREATE factory in enemyFactories)
             {
                 List<GameObject> enemies = factory.Create(difficultyMaster);
-                OrderEnemies(enemies);
-                WakeEnemies(enemies);
+
+                foreach (GameObject enemy in enemies)
+                {
+                    yield return new WaitForSeconds(1f);
+                    OrderEnemy(enemy);
+                    WakeEnemy(enemy);
+                }
+
             }
         }
 
@@ -63,25 +69,21 @@ public class EnemyWaveSpawner : MonoBehaviour
             WaveStartedEvent?.Invoke();
         }
     }
-    private void OrderEnemies(List<GameObject> unorderedEnemies) 
+    private void OrderEnemy(GameObject unorderedEnemy) 
     {
 
         Transform target = difficultyMaster.GetTargetObject().transform;
 
-        foreach (GameObject enemy in unorderedEnemies)
-        {
-            float randomX = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
-            float randomZ = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
+        
+        float randomX = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
+        float randomZ = SPAWNSPACER * (UnityEngine.Random.value < 0.5f ? 1 : -1) + UnityEngine.Random.Range(-50f, 50f);
 
-            enemy.transform.SetPositionAndRotation(new(target.position.x + randomX, target.position.y, target.position.z + randomZ), Quaternion.identity);
-        }
+        unorderedEnemy.transform.SetPositionAndRotation(new(target.position.x + randomX, target.position.y, target.position.z + randomZ), Quaternion.identity);
+        
     }
-    private void WakeEnemies(List<GameObject> enemies) 
+    private void WakeEnemy(GameObject enemy) 
     {
-        foreach (GameObject enemy in enemies) 
-        {
-            enemy.GetComponent<EnemyCharacter>().WakeEnemy();
-        }
+        enemy.GetComponent<EnemyCharacter>().WakeEnemy();
     }
 
     /*

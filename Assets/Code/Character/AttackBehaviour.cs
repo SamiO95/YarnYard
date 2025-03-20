@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class AttackBehaviour : IBEHAVIOUR
 {
-    private int damage;
-    private List<IWEAPON> weapons;
+    private readonly int damage;
+    private readonly List<IWEAPON> weapons;
 
     public AttackBehaviour(int damage, List<IWEAPON> startingWeapons)
     {
