@@ -1,16 +1,23 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponFactory : ICREATE
+public abstract class WeaponFactory : ICREATE
 {
     public List<GameObject> Create(IINSTRUCTOR weaponInstructor)
     {
-        throw new System.NotImplementedException();
+        List<GameObject> weapons = weaponInstructor.GetAvailableObjects();
+
+        foreach(GameObject weaponObject in weapons)
+        {
+            ICORE weapon = weaponObject.GetComponent<ICORE>();
+
+            if(weapon != null)
+            {
+                ConstructWeapon(weapon, weaponInstructor);
+            }
+        }
+        return weapons;
     }
 
-    protected virtual IWEAPON CreateWeapon(IWEAPON weapon, IINSTRUCTOR weaponInstructor) { return weapon; }
-
-    protected virtual IBEHAVIOUR CreateAttackBehaviour(IBEHAVIOUR attackBehaviour, IINSTRUCTOR weaponInstructor) { return attackBehaviour; }
-
+    protected abstract void ConstructWeapon(ICORE weapon, IINSTRUCTOR weaponInstructor);
 }

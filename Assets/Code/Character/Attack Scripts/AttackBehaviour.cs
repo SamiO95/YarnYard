@@ -1,7 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
+/*
+*
+*   AttackBehaviour interfaces between IWEAPON's and IBEHAVIOUR's.
+*   To add an attack as a behaviour, add the IWEAPON to the AttackBehaviour upon contruction.
+*
+*/
 
 public class AttackBehaviour : IBEHAVIOUR
 {
@@ -12,9 +16,9 @@ public class AttackBehaviour : IBEHAVIOUR
     {
         this.damage = damage;
         weapons = new List<IWEAPON>();
-        foreach (IWEAPON w in startingWeapons)
+        foreach (IWEAPON weapon in startingWeapons)
         {
-            weapons.Add(w);
+            weapons.Add(weapon);
         }
     }
 

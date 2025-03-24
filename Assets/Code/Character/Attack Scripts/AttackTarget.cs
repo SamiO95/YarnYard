@@ -34,15 +34,15 @@ public class AttackTarget : IWEAPON
                 if(distance < damageRadius)
                 {
                     target.TakeDamage(damage);
-                    onCooldown = true;
-                    Cooldown(attackCooldown, target);
+                    Cooldown(attackCooldown);
                 }
             }
         }
     }
-    private void Cooldown(float attackCooldown, ITAKEDAMAGE damageable)
+    private void Cooldown(float attackCooldown)
     {
-        damageable.SetTimer(attackCooldown, ResetCooldown);
+        onCooldown = true;
+        TimerUtil.Instance.SetTimer(attackCooldown, ResetCooldown);
     }
 
     private void ResetCooldown()

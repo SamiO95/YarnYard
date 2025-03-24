@@ -65,18 +65,18 @@ public class DifficultyMaster : MonoBehaviour, IINSTRUCTOR
     //Gets the enemies that are active in the scene
     public List<GameObject> GetUnavailableObjects()
     {
-        List<GameObject> availableEnemies = new ();
+        List<GameObject> unavailableEnemies = new ();
         if (enemyPool != null)
         {
             foreach (GameObject enemy in enemyPool)
             {
                 if (enemy.activeSelf)
                 {
-                    availableEnemies.Add(enemy);
+                    unavailableEnemies.Add(enemy);
                 }
             }
         }
-        return availableEnemies;
+        return unavailableEnemies;
     }
     //Gets the object that contains the DifficultyMaster (being the target) Might be switched to a SerializeField variable
     public GameObject GetTargetObject() 

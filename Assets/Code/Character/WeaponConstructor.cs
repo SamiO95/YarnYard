@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-    Instantiates the neccessary Objects for Weapons.
-    Called through a WeaponFactory.
-     
+*
+*   WeaponConstructor calls to assemble
+*
+*
 */
 
 public class WeaponConstructor : MonoBehaviour

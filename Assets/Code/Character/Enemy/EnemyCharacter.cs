@@ -6,7 +6,6 @@ public class EnemyCharacter : Character
 {
     public void WakeEnemy() 
     {
-        Debug.Log("Enemy woken");
         this.gameObject.SetActive(true);
     }
     public int GetEnemyHealth() 

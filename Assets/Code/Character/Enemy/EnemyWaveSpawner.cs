@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- 
-  Enemy wave spawner handles the activation, placement and timing of Enemies.
- 
-  @Author: Charlie Ahlstrand
- 
+* 
+*   Enemy wave spawner handles the activation, placement and timing of Enemies.
+* 
 */
 public class EnemyWaveSpawner : MonoBehaviour
 {
     private readonly int SPAWNSPACER = 20;
+    private readonly float TIMINGWAVESTART = 1f;
+    private readonly float TIMINGWAVEFINISHED = 20f;
 
     public delegate void EnemyWaveDeligate();
     public event EnemyWaveDeligate WaveStartedEvent;
@@ -39,12 +39,12 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
     private IEnumerator SpawnWave() 
     {
-        yield return new WaitForSeconds(5f);
-
         if (WaveStartedEvent != null)
         {
             WaveStartedEvent?.Invoke();
         }
+
+        yield return new WaitForSeconds(TIMINGWAVESTART);
 
         if (enemyFactories.Count != 0 && enemyFactories != null)
         {
@@ -62,7 +62,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(TIMINGWAVEFINISHED);
 
         if (WaveFinishedEvent != null)
         {

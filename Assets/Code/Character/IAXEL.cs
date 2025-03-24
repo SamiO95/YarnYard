@@ -5,9 +5,6 @@ using UnityEngine;
 
 public interface IAXEL
 {
-    void Activate(int damage);
-
-    void Deactivate();
-
-    void SetTimer(float time, Action timerAction);
+    void Activate(float degrees);
+    void Deactivate(float degrees);
 }

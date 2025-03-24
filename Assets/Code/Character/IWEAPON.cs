@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IWEAPON 
 {
-    public void Attack(int damage) { }
+    public void Attack(int damage);
 }

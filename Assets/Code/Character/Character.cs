@@ -100,18 +100,5 @@ public class Character : MonoBehaviour, ITAKEDAMAGE
     {
         this.MAXHEALTH = maxHealth;
     }
-    
-    //Timer utility, May be moved for more apt application
-    public void SetTimer(float time, Action timerAction)
-    {
-        StartCoroutine(Timer(time, timerAction));
-    }
-
-    private IEnumerator Timer(float time, Action timerAction)
-    {
-        yield return new WaitForSeconds(time);
-
-        timerAction();
-    }
 
 }
