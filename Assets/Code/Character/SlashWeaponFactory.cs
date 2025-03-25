@@ -1,5 +1,9 @@
 using System.Collections.Generic;
-
+/*
+* 
+*   SlashWeaponFactory Sets up any available Slash weaponry.
+*
+*/
 public class SlashWeaponFactory : WeaponFactory
 {
     private readonly float attackCooldown = 5f;
