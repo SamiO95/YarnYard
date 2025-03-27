@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class AttackTarget : IWEAPON
 {
+    public event IWEAPON.AttackDeligate AttackEvent;
+    public event IWEAPON.CooldownDeligate AttackCooldownEvent;
+    public event IWEAPON.DamageDeligate DamageEvent; 
     private readonly float damageRadius;
     private readonly float attackCooldown;
     private readonly ITAKEDAMAGE target;
@@ -20,12 +23,13 @@ public class AttackTarget : IWEAPON
     {
         if(!onCooldown)
         {
-            GameObject damageableObject = target.GetDamagableCharacter();
+            Transform damageableObject = target.GetDamagableCharacter().transform;
 
             if(damageableObject != null)
             {
                 //Distance to target (x_2 - x_1), y, (z_2 - z_1)
-                Vector3 vectorToTarget = new(damageableObject.transform.position.x - character.transform.position.x, character.transform.position.y, damageableObject.transform.position.z - character.transform.position.z);
+                Vector3 vectorToTarget = new 
+                (damageableObject.position.x - character.transform.position.x, character.transform.position.y, damageableObject.position.z - character.transform.position.z);
 
                 //Total distance
                 float distance = Mathf.Sqrt(vectorToTarget.x * vectorToTarget.x + vectorToTarget.z * vectorToTarget.z);
@@ -33,8 +37,10 @@ public class AttackTarget : IWEAPON
                 //check if distance is less than damage radius
                 if(distance < damageRadius)
                 {
-                    target.TakeDamage(damage);
+                    AttackEvent?.Invoke();
+                    DamageEvent?.Invoke(damage);
                     Cooldown(attackCooldown);
+                    
                 }
             }
         }
@@ -47,6 +53,7 @@ public class AttackTarget : IWEAPON
 
     private void ResetCooldown()
     {
+        AttackCooldownEvent?.Invoke();
         onCooldown = false;
     }
 }

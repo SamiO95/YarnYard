@@ -8,27 +8,38 @@ using UnityEngine;
 */
 public class WeaponAxel : MonoBehaviour, IAXEL
 {
-    private float rotationSpeed = 0.6f;
+    private float rotationSpeed = 1f;
+    private float rotationBounds = 1f;
+    private float rotationReset = 0;
+    private readonly float ROTATIONMOD = 1f;
 
     public void SetRotationSpeed(float rotationSpeed)
     {
         this.rotationSpeed = rotationSpeed;
     }
-    public void Activate(float degrees)
+    public void SetRotationBounds(float rotationBounds)
+    {
+        this.rotationBounds = rotationBounds;
+    }
+    public void SetRotationReset(float rotationReset)
+    {
+        this.rotationReset = rotationReset;
+    }
+    public void Activate()
     {
         gameObject.SetActive(true);
-        StartCoroutine(Rotate(degrees));
+        StartCoroutine(Rotate());
     }
-    public void Deactivate(float degrees)
+    public void Deactivate()
     {
         gameObject.SetActive(false);
-        transform.rotation = Quaternion.Euler(0, degrees, 0);
+        transform.rotation = Quaternion.Euler(0, rotationReset, 0);
     }
-    private IEnumerator Rotate(float degrees)
+    private IEnumerator Rotate()
     {
-        while(transform.rotation.y < degrees)
+        while(transform.rotation.eulerAngles.y < rotationBounds)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(transform.rotation.x, degrees, transform.rotation.z), Time.deltaTime / rotationSpeed);
+            transform.Rotate(new Vector3(0, rotationSpeed,0) * ROTATIONMOD * Time.deltaTime);
             yield return null;
         } 
 

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public interface IAXEL
 {
-    void Activate(float degrees);
-    void Deactivate(float degrees);
+    void SetRotationSpeed(float rotationSpeed);
+    void SetRotationBounds(float rotationBounds);
+    void SetRotationReset(float rotationReset);
+    void Activate();
+    void Deactivate();
 }

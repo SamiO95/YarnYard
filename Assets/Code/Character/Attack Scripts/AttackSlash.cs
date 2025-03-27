@@ -1,4 +1,4 @@
-using UnityEngine;
+using System;
 /*
 *
 *   AttackSlash is an IWEAPON that calls for an IAXEL to start rotating and SetActive on a Damaging Collider.
@@ -7,36 +7,32 @@ using UnityEngine;
 */
 public class AttackSlash : IWEAPON
 {
+    public event IWEAPON.AttackDeligate AttackEvent;
+    public event IWEAPON.CooldownDeligate AttackCooldownEvent;
+    public event IWEAPON.DamageDeligate DamageEvent;
     private readonly float attackCooldown;
-    private readonly float attackRotationLength; //Degrees
-    private readonly float RESET = 0;
-    private readonly IAXEL slashAxel;
-    private readonly IDODAMAGE damageCollider;
+    private readonly float attackStopMod;
     private bool onCooldown = false;
 
-    public AttackSlash(float attackCooldown, float attackRotationLength, IAXEL slashAxel, IDODAMAGE damageCollider)
+    public AttackSlash(float attackCooldown, float attackStopMod)
     {
         this.attackCooldown = attackCooldown;
-        this.attackRotationLength = attackRotationLength;
-        this.slashAxel = slashAxel;
-        this.damageCollider = damageCollider;
+        this.attackStopMod = attackStopMod;
     }
-
     public void Attack(int damage)
     {
-        if(!onCooldown)
+        if (!onCooldown)
         {
-            //No decoupling!! FIX XXXXXX
-            damageCollider.SetDamage(damage);
-            slashAxel.Activate(attackRotationLength);
-            Cooldown(attackCooldown);
+            AttackEvent?.Invoke();
+            DamageEvent?.Invoke(damage);
+            Cooldown();
         }
     }
 
-    private void Cooldown(float attackCooldown)
+    private void Cooldown()
     {
         onCooldown = true;
-        TimerUtil.Instance.SetTimer(attackCooldown / 2, ResetAxel);
+        TimerUtil.Instance.SetTimer(attackCooldown/attackStopMod, DeactivateAttack);
         TimerUtil.Instance.SetTimer(attackCooldown, ResetCooldown);
     }
 
@@ -45,8 +41,8 @@ public class AttackSlash : IWEAPON
         onCooldown = false;
     }
 
-    private void ResetAxel() 
+    private void DeactivateAttack()
     {
-        slashAxel.Deactivate(RESET);
+        AttackCooldownEvent?.Invoke();
     }
 }
