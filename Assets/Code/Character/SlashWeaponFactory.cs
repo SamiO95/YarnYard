@@ -8,9 +8,9 @@ using UnityEngine;
 public class SlashWeaponFactory : WeaponFactory
 {
     private readonly float attackCooldown = 3f;
-    private readonly float attackStopMod = 1.2f;
-    private readonly float attackRotationSpeed = 60f;
-    private readonly float attackRotationBounds = 180f;
+    private readonly float attackStopMod = 8f;
+    private readonly float attackRotationSpeed = 500f;
+    private readonly float attackRotationBounds = 250f;
     private readonly float rotationReset = 0f;
 
     protected override void ConstructWeapon(ICORE weapon, IINSTRUCTOR weaponInstructor)
@@ -30,6 +30,7 @@ public class SlashWeaponFactory : WeaponFactory
             slashWeapon.DamageEvent += weaponCollider.SetDamage;
             slashWeapon.AttackEvent += weaponAxel.Activate; 
             slashWeapon.AttackCooldownEvent += weaponAxel.Deactivate;
+            weaponAxel.Deactivate();
 
             weapon.SetBehaviour(new AttackBehaviour((int)weaponInstructor.GetMod(), new List<IWEAPON>() 
             { slashWeapon }));        

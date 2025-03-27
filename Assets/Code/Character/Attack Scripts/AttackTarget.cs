@@ -3,7 +3,7 @@ using UnityEngine;
 public class AttackTarget : IWEAPON
 {
     public event IWEAPON.AttackDeligate AttackEvent;
-    public event IWEAPON.CooldownDeligate AttackCooldownEvent;
+    public event IWEAPON.AttackDeligate AttackCooldownEvent;
     public event IWEAPON.DamageDeligate DamageEvent; 
     private readonly float damageRadius;
     private readonly float attackCooldown;
@@ -17,6 +17,7 @@ public class AttackTarget : IWEAPON
         this.attackCooldown = attackCooldown;
         this.damageRadius = damageRadius;
         this.character = character;
+        DamageEvent += target.TakeDamage;
     }
 
     public void Attack(int damage)
@@ -27,6 +28,7 @@ public class AttackTarget : IWEAPON
 
             if(damageableObject != null)
             {
+                AttackEvent?.Invoke();
                 //Distance to target (x_2 - x_1), y, (z_2 - z_1)
                 Vector3 vectorToTarget = new 
                 (damageableObject.position.x - character.transform.position.x, character.transform.position.y, damageableObject.position.z - character.transform.position.z);
@@ -37,10 +39,8 @@ public class AttackTarget : IWEAPON
                 //check if distance is less than damage radius
                 if(distance < damageRadius)
                 {
-                    AttackEvent?.Invoke();
                     DamageEvent?.Invoke(damage);
                     Cooldown(attackCooldown);
-                    
                 }
             }
         }

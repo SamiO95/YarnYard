@@ -60,6 +60,8 @@ public class PlayerWeaponMaster : MonoBehaviour, IINSTRUCTOR
     }
     private void GenerateWeaponObjects()
     {
-        weaponPool = new List<GameObject>() { Instantiate(slashBase, storageLocation) };
+        GameObject weaponObject = Instantiate(slashBase, storageLocation);
+        weaponObject.SetActive(false);
+        weaponPool = new List<GameObject>() { weaponObject };
     }
 }

@@ -8,7 +8,7 @@ using System;
 public class AttackSlash : IWEAPON
 {
     public event IWEAPON.AttackDeligate AttackEvent;
-    public event IWEAPON.CooldownDeligate AttackCooldownEvent;
+    public event IWEAPON.AttackDeligate AttackCooldownEvent;
     public event IWEAPON.DamageDeligate DamageEvent;
     private readonly float attackCooldown;
     private readonly float attackStopMod;

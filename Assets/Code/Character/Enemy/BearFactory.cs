@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BearFactory : EnemyFactory
 {
-    private readonly int BASEMAXHEALTH = 50;
+    private readonly int BASEMAXHEALTH = 5;
     private readonly int BASEDAMAGE = 1;
     private readonly float BASEMELEERANGE = 5f;
-    private readonly float ATTACKCOOLDOWN = 5f;
-    private readonly float BASEMOVEMENTSPEED = 0.3f;
+    private readonly float ATTACKCOOLDOWN = 1f;
+    private readonly float BASEMOVEMENTSPEED = 0.2f;
 
     protected override EnemyCharacter ConstructEnemy(EnemyCharacter enemy, IINSTRUCTOR difficultyMaster)
     {

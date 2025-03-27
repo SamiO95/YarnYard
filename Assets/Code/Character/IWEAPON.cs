@@ -5,10 +5,9 @@ using UnityEngine;
 public interface IWEAPON 
 {
     public delegate void AttackDeligate();
-    public event AttackDeligate AttackEvent;
     public delegate void DamageDeligate(int damage);
+    public event AttackDeligate AttackEvent;
     public event DamageDeligate DamageEvent;
-    public delegate void CooldownDeligate();
-    public event CooldownDeligate AttackCooldownEvent;
+    public event AttackDeligate AttackCooldownEvent;
     public void Attack(int damage);
 }

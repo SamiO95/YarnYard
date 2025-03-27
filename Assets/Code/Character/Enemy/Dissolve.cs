@@ -9,14 +9,18 @@ public class Dissolve : MonoBehaviour
 
     public List<Renderer> enemyRenderers;
 
+    private EnemyCharacter myCharacter;
+
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<EnemyCharacter>().DeathEvent += EnemyDied;
+        myCharacter = gameObject.GetComponent<EnemyCharacter>();
+        myCharacter.DeathEvent += EnemyDied;
     }
     public void EnemyDied()
     {
         StartCoroutine(EnemyDissolve());
+        myCharacter.SetEnemyBehaviour(new EnemyDeathBehaviour());
     }
 
     IEnumerator EnemyDissolve()
@@ -30,7 +34,7 @@ public class Dissolve : MonoBehaviour
             }
 
             yield return new WaitForSeconds(activationDuration);
-
+            
             gameObject.SetActive(false);
 
         }

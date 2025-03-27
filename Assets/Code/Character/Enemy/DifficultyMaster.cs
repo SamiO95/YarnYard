@@ -91,6 +91,7 @@ public class DifficultyMaster : MonoBehaviour, IINSTRUCTOR
         for (int i = 0 ; i < maxNumberOfEnemies ; i++)
         {
             GameObject newEnemy = Instantiate(enemyBase, storageLocation);
+            newEnemy.SetActive(false);
             newEnemy.name += i;
             enemyPool.Add(newEnemy);
         } 
