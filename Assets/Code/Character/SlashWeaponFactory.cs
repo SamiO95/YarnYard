@@ -10,8 +10,8 @@ public class SlashWeaponFactory : WeaponFactory
     private readonly float attackCooldown = 3f;
     private readonly float attackStopMod = 8f;
     private readonly float attackRotationSpeed = 500f;
-    private readonly float attackRotationBounds = 250f;
-    private readonly float rotationReset = 0f;
+    private readonly float attackRotationBounds = 360f;
+    private readonly float rotationReset = 90f;
 
     protected override void ConstructWeapon(ICORE weapon, IINSTRUCTOR weaponInstructor)
     {

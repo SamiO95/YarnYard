@@ -14,8 +14,8 @@ public class DifficultyCalculator
     private Difficulty difficulty = Difficulty.Normal;
 
     private readonly float TIMEMOD = 10f;
-    private readonly float EASYMOD = 0.5f;
-    private readonly float NORMALMOD = 1f;
+    private readonly float EASYMOD = 1f;
+    private readonly float NORMALMOD = 2f;
     private readonly float HARDMOD = 3f;
 
     public float GetTimeDifficultyMod() 

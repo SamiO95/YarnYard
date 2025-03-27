@@ -117,8 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1325bb53b1a97d49ab8ecb538e3e512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dissolveShader: {fileID: 2100000, guid: 30621e532aabd6c4bad3ab7e4d324448, type: 2}
-  activationDuration: 3
+  dissolveDuration: 3
   enemyRenderers:
   - {fileID: 2862951479927438947}
   - {fileID: 8865573718370906867}
@@ -129,6 +128,7 @@ MonoBehaviour:
   - {fileID: 6932128338912826205}
   - {fileID: 6593958396936107775}
   - {fileID: 8474958119579425010}
+  dissolverShader: {fileID: 2100000, guid: 30621e532aabd6c4bad3ab7e4d324448, type: 2}
 --- !u!1001 &8409750238514581277
 PrefabInstance:
   m_ObjectHideFlags: 0

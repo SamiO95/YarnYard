@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Dissolve : MonoBehaviour
 {
-    public Material dissolveShader;
-    public float activationDuration = 3f;
+    [SerializeField]
+    private float dissolveDuration = 3f;
 
-    public List<Renderer> enemyRenderers;
+    private int dissolveAmount = Shader.PropertyToID("_DissolveAmount");
+
+    [SerializeField]
+    private List<Renderer> enemyRenderers;
+    [SerializeField]
+    private Material dissolverShader;
 
     private EnemyCharacter myCharacter;
 
@@ -15,6 +20,7 @@ public class Dissolve : MonoBehaviour
     void Start()
     {
         myCharacter = gameObject.GetComponent<EnemyCharacter>();
+
         myCharacter.DeathEvent += EnemyDied;
     }
     public void EnemyDied()
@@ -25,18 +31,30 @@ public class Dissolve : MonoBehaviour
 
     IEnumerator EnemyDissolve()
     {
-        if (dissolveShader != null && enemyRenderers != null)
+        if ( enemyRenderers != null)
         {
-            foreach (Renderer enemyParts in enemyRenderers)
+            float elapsedTime = Time.deltaTime;
+            float dissolveTime = Time.deltaTime + dissolveDuration;
+            while(elapsedTime < dissolveDuration) 
             {
-                Material originalMaterial = enemyParts.material;
-                enemyParts.material = dissolveShader;
+                elapsedTime += Time.deltaTime;
+
+                foreach(Renderer enemyPart in enemyRenderers)
+                {
+                    float lerpDissolve = Mathf.Lerp(0, 1f,(elapsedTime/dissolveTime));
+                    enemyPart.material.SetFloat(dissolveAmount, lerpDissolve);                    
+                }
+                yield return null;
             }
 
-            yield return new WaitForSeconds(activationDuration);
+            yield return new WaitForSeconds(dissolveDuration);
             
             gameObject.SetActive(false);
 
+            foreach(Renderer enemyPart in enemyRenderers)
+            {
+                enemyPart.material.SetFloat(dissolveAmount, 1);
+            }
         }
     }
 }

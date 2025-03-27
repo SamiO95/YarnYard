@@ -16,8 +16,8 @@ public class PlayerCharacter : Character
 
     public void Start()
     {
-        SetMaxHealth(PLAYERMAXHEALTH);
-        SetHealth(PLAYERMAXHEALTH);
+        SetPlayerMaxHealth(PLAYERMAXHEALTH);
+        SetPlayerHealth(PLAYERMAXHEALTH);
         AddBehaviour(this.gameObject.GetComponent<PlayerMovement>());
 
         playerWP = GetComponent<PlayerWeaponMaster>();

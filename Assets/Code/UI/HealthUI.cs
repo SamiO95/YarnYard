@@ -16,9 +16,10 @@ public class HealthUI : MonoBehaviour
     private Slider healthSlider;
     private PlayerCharacter player;
 
-    void Start()
+    void Awake()
     {
         player = FindObjectOfType<PlayerCharacter>();
+
         if (player != null)
         {
             player.DamagedEvent += UpdateHpUI;

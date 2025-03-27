@@ -137,8 +137,8 @@ VisualEffectResource:
       lightProbeUsage: 0
     m_CullingFlags: 3
     m_UpdateMode: 0
-    m_PreWarmDeltaTime: 0.07
-    m_PreWarmStepCount: 33
+    m_PreWarmDeltaTime: 0.0027056278
+    m_PreWarmStepCount: 1848
     m_InitialEventName: OnPlay
 --- !u!114 &8926484042661614602
 MonoBehaviour:
@@ -5245,7 +5245,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 100
+      m_SerializableObject: 150
     m_Space: 2147483647
   m_Property:
     name: stickForce
