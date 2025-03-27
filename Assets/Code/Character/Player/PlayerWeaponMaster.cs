@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerWeaponMaster : MonoBehaviour, IINSTRUCTOR
 {
-
     [SerializeField]
     GameObject slashBase;
     [SerializeField]
@@ -13,7 +12,7 @@ public class PlayerWeaponMaster : MonoBehaviour, IINSTRUCTOR
 
     private List<GameObject> weaponPool;
 
-    public void Start()
+    public void Awake()
     {
         GenerateWeaponObjects();
     }

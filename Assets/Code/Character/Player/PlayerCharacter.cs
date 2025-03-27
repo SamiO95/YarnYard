@@ -10,27 +10,28 @@ public class PlayerCharacter : Character
 
     [SerializeField]
     private int PLAYERMAXHEALTH;
-    private List<IBEHAVIOUR> playerAttacks;
 
-    public void Start() 
+    private IINSTRUCTOR playerWP;
+    private ICREATE playerStarterWF;
+
+    public void Start()
     {
         SetMaxHealth(PLAYERMAXHEALTH);
         SetHealth(PLAYERMAXHEALTH);
         AddBehaviour(this.gameObject.GetComponent<PlayerMovement>());
-    
-        /*foreach (IBEHAVIOUR act in playerAttacks)
-        {
-            AddBehaviour(act);
-        }*/
+
+        playerWP = GetComponent<PlayerWeaponMaster>();
+        playerStarterWF = new SlashWeaponFactory();
+        SetStarterWeapons(playerWP, playerStarterWF);
     }
     public int GetPlayerHealth()
     {
         return GetHealth();
     }
-    public void SetPlayerHealth(int health) 
+    public void SetPlayerHealth(int health)
     {
         SetHealth(health);
-        if (HpSetEvent != null)
+        if(HpSetEvent != null)
             HpSetEvent?.Invoke();
     }
     public int GetPlayerMaxHealth()
@@ -43,5 +44,18 @@ public class PlayerCharacter : Character
 
         if(MaxHpSetEvent != null)
             MaxHpSetEvent?.Invoke();
+    }
+
+    private void SetStarterWeapons(IINSTRUCTOR playerWP, ICREATE playerStarterWF)
+    {
+        List<IBEHAVIOUR> starterWeapons = new WeaponConstructor().GetWeaponIBehaviours(playerWP, playerStarterWF);
+
+        if(starterWeapons != null)
+        {
+            foreach(IBEHAVIOUR weapon in starterWeapons)
+            {
+                AddBehaviour(weapon);
+            }
+        }
     }
 }

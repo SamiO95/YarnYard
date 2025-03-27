@@ -6,7 +6,7 @@ using System.Collections.Generic;
 */
 public class SlashWeaponFactory : WeaponFactory
 {
-    private readonly float attackCooldown = 5f;
+    private readonly float attackCooldown = 3f;
     private readonly float attackRotationLength = 180f;
 
     protected override void ConstructWeapon(ICORE weapon, IINSTRUCTOR weaponInstructor)
