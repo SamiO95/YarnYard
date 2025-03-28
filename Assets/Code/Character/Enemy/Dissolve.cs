@@ -29,32 +29,12 @@ public class Dissolve : MonoBehaviour
         myCharacter.SetEnemyBehaviour(new EnemyDeathBehaviour());
     }
 
+    //TODO
     IEnumerator EnemyDissolve()
     {
-        if ( enemyRenderers != null)
-        {
-            float elapsedTime = Time.deltaTime;
-            float dissolveTime = Time.deltaTime + dissolveDuration;
-            while(elapsedTime < dissolveDuration) 
-            {
-                elapsedTime += Time.deltaTime;
-
-                foreach(Renderer enemyPart in enemyRenderers)
-                {
-                    float lerpDissolve = Mathf.Lerp(0, 1f,(elapsedTime/dissolveTime));
-                    enemyPart.material.SetFloat(dissolveAmount, lerpDissolve);                    
-                }
-                yield return null;
-            }
-
-            yield return new WaitForSeconds(dissolveDuration);
+        yield return new WaitForSeconds(dissolveDuration);
             
-            gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
-            foreach(Renderer enemyPart in enemyRenderers)
-            {
-                enemyPart.material.SetFloat(dissolveAmount, 1);
-            }
-        }
     }
 }
